@@ -8,34 +8,36 @@ import {
   Code,
   Grid,
   theme,
+  Container,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import Nav from './Components/Nav';
+import About from './Components/About';
+import InfoSection from './Components/InfoSection';
+import Projects from './Components/Projects';
+import './app.css'
+import { ParallaxProvider } from 'react-scroll-parallax';
+import Skills from './Components/Skills';
+import Tools from './Components/Tools';
+
+
 
 function App() {
   return (
+    
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+
+      <Nav />
+        
+        <InfoSection/>
+        <About/>
+        <Projects/>
+        <Skills/>
+        <Tools/>
     </ChakraProvider>
+    
+    
   );
 }
 

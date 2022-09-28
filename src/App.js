@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   ChakraProvider,
   Box,
@@ -7,7 +8,7 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+//  theme,
   Container,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
@@ -21,6 +22,8 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import Skills from './Components/Skills';
 import Tools from './Components/Tools';
 import Contact from './Components/Contact';
+import theme from './theme';
+import Background from './Components/Background';
 
 
 
@@ -32,7 +35,7 @@ function App() {
       <Nav />
         
         <InfoSection />
-        
+        <Background/>
         <About/>
         <Projects/>
         <Skills/>

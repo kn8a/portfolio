@@ -45,7 +45,7 @@ function Projects() {
   return (
     <>
     <Container maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" id='projects' marginTop={10}>
-    <Heading margin={10} marginBottom={0} className='heading' >Projects</Heading>
+    <Heading margin={10} marginBottom={0} fontFamily={'font1'} fontWeight={400} fontSize={'xxx-large'} >Projects</Heading>
     <Grid templateColumns='repeat(auto-fit, minmax(320px, 1fr))'>
         {projects.map((project) => {
             return (<Box 

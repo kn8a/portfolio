@@ -1,4 +1,4 @@
-import { Flex, Accordion, AccordionItem, AccordionIcon, AccordionPanel, AccordionButton, Box, MinusIcon, AddIcon, ChakraProvider, Container, Center, Heading, Image } from '@chakra-ui/react'
+import { Flex, Accordion, AccordionItem, AccordionIcon, AccordionPanel, AccordionButton, Box, MinusIcon, AddIcon, ChakraProvider, Container, Center, Heading, Image, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import {
     List,
@@ -10,20 +10,24 @@ import {
 import InfoSection from './InfoSection'
 
 import Knight from '../assets/images/ChessKnight.svg'
-import KnightBlue from '../assets/images/knight-blue.svg'
-import Knight12 from '../assets/images/knight12.svg'
+import Knightdark from '../assets/images/knight-gd1.svg'
+import Knightlight from '../assets/images/knight-gl.svg'
 import SpinKnight from './SpinKnight'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import "@fontsource/la-belle-aurore"
   
   
 
 function About() {
+
+  const knightimage = useColorModeValue(Knightlight, Knightdark)
+
   return (
     <>
-    <Center id='about'>
+    <Container id={'contact'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10}>
 
     
-    <Box maxW={980} border={0}>
+    
     <Flex paddingTop={20} alignItems={'flex-start'} gap={'2rem'} border={0}>
     
     <Box width={'70%'} border={0}>
@@ -31,7 +35,7 @@ function About() {
     
     <Flex>
     <Accordion defaultIndex={[2]} width={'100'} boxShadow={'sm'} m={4} gap={4} flexDirection={'column'} display={'flex'} border={0}>
-    <Heading  as={'h2'} size={'xl'} textAlign={'left'} m={4} className='heading' marginBottom={0}>About me</Heading>
+    <Heading  as={'h2'} size={'xl'} textAlign={'left'} m={4} className='heading' marginBottom={0} fontFamily={'font1'} fontWeight={400} fontSize={'xxx-large'}>About me</Heading>
 
      
      <AccordionItem border={0}>
@@ -106,7 +110,7 @@ I ended up designing, building and maintaining the company's main website includ
       shadow={'md'}>
 
         <Box flex='1' textAlign='left' fontWeight={600}>
-          Currently
+          Present
         </Box>
         <AccordionIcon />
       </AccordionButton>
@@ -128,11 +132,11 @@ I ended up designing, building and maintaining the company's main website includ
     </Flex>
     </Box>
 
-    <Image src={Knight12} rounded={20} width={'30%'} objectFit={'cover'} marginTop={8}></Image>
+    <Image src={knightimage} rounded={20} width={'30%'} objectFit={'cover'} marginTop={8}></Image>
     
     </Flex>
-    </Box>
-    </Center>
+   
+    </Container>
     </>
   )
 }

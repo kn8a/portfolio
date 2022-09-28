@@ -13,7 +13,8 @@ import {
   Flex,
   Text,
   Icon,
-  Divider
+  Divider,
+  Select
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { GoLocation } from 'react-icons/go';
@@ -39,11 +40,11 @@ const Contact = () => {
     <Container id={'contact'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10}>
       <Stack spacing={10}>
         <Flex align="center" justify="center" direction="column">
-          <Heading className='heading' mb={2}>
+          <Heading className='heading' mb={2} fontFamily={'font1'} fontWeight={400} fontSize={'xxx-large'}>
             Contact me
           </Heading>
           <Text fontSize="md" textAlign="center">
-            Send me a message with your contact info, and I will get back to you as quickly as possible.
+            I will get back to you as quickly as possible.
           </Text>
         </Flex>
         <Stack
@@ -91,8 +92,14 @@ const Contact = () => {
               </FormControl>
             </Stack>
             <FormControl id="subject">
-              <FormLabel>Subject</FormLabel>
-              <Input type="text" placeholder="Are you available for freelance work?" rounded="md" />
+              <FormLabel>Purpose</FormLabel>
+              <Select placeholder='Select option'>
+                <option value='hire'>Hire for full/part time</option>
+                <option value='freelance'>Freelance work</option>
+                <option value='startup'>Join a startup</option>
+                <option value='open-source'>Open source project</option>
+                <option value='recruiter'>I am a recruiter</option>
+            </Select>
             </FormControl>
             <FormControl id="message">
               <FormLabel>Message</FormLabel>

@@ -79,9 +79,9 @@ function Skills() {
 
   return (
     <Container id={'skills'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10} >
-        <Heading margin={10} className='heading' fontWeight={400} fontSize={'xxx-large'} marginBottom={0}>Skills / Tools</Heading>
+        <Heading margin={10} fontFamily={'font1'} fontWeight={400} fontSize={'xxx-large'} marginBottom={0} >Skills / Tools</Heading>
         
-        <Flex gap={5} flexWrap={'wrap'}>
+        <Flex gap={5} marginTop={5} flexWrap={'wrap'}>
         {skills.map(skill => {
             return (
                 <Skill skill={skill}/>

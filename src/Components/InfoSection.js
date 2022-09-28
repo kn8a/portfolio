@@ -25,7 +25,7 @@ const iconProps = {
 
 const InfoSection = () => {
   return (
-    <Container maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" >
+    <Container maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" id={'top'}>
       
         <VStack spacing={4} px={2} alignItems={{ base: 'center', sm: 'flex-start' }}>
           <Stack justifyContent="center" alignItems="center">
@@ -38,7 +38,7 @@ const InfoSection = () => {
             width={{ base: '23rem', sm: 'auto' }}
             fontSize={{ base: '2.5rem', sm: '3rem' }}
           >
-            Hi! 👋
+            Hi! <div id='hand'>👋</div>
             <br /> I am a Andrew Knight,<br /> a Full-Stack 
 
             Developer

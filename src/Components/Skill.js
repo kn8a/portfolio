@@ -4,7 +4,7 @@ import React from 'react'
 function Skill(props) {
     const skill = props.skill
   return (
-    <Flex alignItems={'flex-end'} textAlign={'end'} gap={2} shadow={'base'} px={4} py={2} rounded={20} flexWrap={'wrap'} 
+    <Flex alignItems={'center'} gap={2} shadow={'base'} px={4} py={2} rounded={20} flexWrap={'wrap'} 
     bg="gray.50"
         _dark={{ bg: "gray.900" }}
     >

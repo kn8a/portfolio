@@ -45,20 +45,20 @@ export default function Nav() {
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex alignItems="center" >
             
-            <chakra.a 
-              href="/"
-              title="Kn8 Home Page"
-              display="flex"
-              alignItems="flex-start"
+          <AnchorLink href="#top" title="Kn8 Home Page">
               
-            >
               <Icon as={FaChessKnight} display={'flex'} alignItems="center" boxSize={'1.5rem'}/>
+              </AnchorLink>
               
-            <Flex ml="2" fontSize="xl" fontWeight="600" alignSelf={'center'} alignItems={'center'}>Kn8</Flex>
+              <AnchorLink href="#top" title="Kn8 Home Page">
+              
+              <Flex ml="2" fontSize="xl" fontWeight="600" alignSelf={'center'} alignItems={'center'}>Kn8</Flex>
+              </AnchorLink>
+            
             {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
               Kn8
             </chakra.h1> */}
-            </chakra.a>
+            
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -71,15 +71,18 @@ export default function Nav() {
               }}
             >
               <AnchorLink href="#about"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={300}>About</Button>
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>About</Button>
               </AnchorLink>
               <AnchorLink href="#skills"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={300}>Skills</Button>
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Skills</Button>
               </AnchorLink>
               <AnchorLink href="#projects"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={300}>Projects</Button>
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Projects</Button>
               </AnchorLink>
-              <Button variant="ghost" fontSize={'large'} fontWeight={300}>Resume</Button>
+              <AnchorLink href="#contact"> 
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Contact</Button>
+              </AnchorLink>
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Resume</Button>
               
             </HStack>
             <ColorModeSwitcher/>

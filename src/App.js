@@ -20,6 +20,7 @@ import './app.css'
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Skills from './Components/Skills';
 import Tools from './Components/Tools';
+import Contact from './Components/Contact';
 
 
 
@@ -30,11 +31,13 @@ function App() {
 
       <Nav />
         
-        <InfoSection/>
+        <InfoSection />
+        
         <About/>
         <Projects/>
         <Skills/>
-        <Tools/>
+        <Contact/>
+        
     </ChakraProvider>
     
     

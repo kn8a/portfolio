@@ -10,6 +10,8 @@ import {
 import InfoSection from './InfoSection'
 
 import Knight from '../assets/images/ChessKnight.svg'
+import KnightBlue from '../assets/images/knight-blue.svg'
+import Knight12 from '../assets/images/knight12.svg'
 import SpinKnight from './SpinKnight'
 import { ParallaxProvider } from 'react-scroll-parallax'
   
@@ -21,23 +23,24 @@ function About() {
     <Center id='about'>
 
     
-    <Box maxW={980}>
-    <Flex paddingTop={20} alignItems={'flex-end'} gap={'2rem'}>
+    <Box maxW={980} border={0}>
+    <Flex paddingTop={20} alignItems={'flex-start'} gap={'2rem'} border={0}>
     
-    <Box width={'70%'} >
+    <Box width={'70%'} border={0}>
 
-    <Heading  as={'h2'} size={'xl'} textAlign={'left'} m={4}>About me</Heading>
+    
     <Flex>
     <Accordion defaultIndex={[2]} width={'100'} boxShadow={'sm'} m={4} gap={4} flexDirection={'column'} display={'flex'} border={0}>
-    
+    <Heading  as={'h2'} size={'xl'} textAlign={'left'} m={4} className='heading' marginBottom={0}>About me</Heading>
 
      
      <AccordionItem border={0}>
     <h2>
-      <AccordionButton 
+      <AccordionButton
       bg="gray.100"
       _dark={{ bg: "gray.700" }}
       rounded={10}
+      shadow={'md'}
       >
         <Box flex='1' textAlign='left' fontWeight={600} border={0}>
           Early days
@@ -68,6 +71,7 @@ function About() {
       bg="gray.200"
       _dark={{ bg: "gray.600" }}
       rounded={10}
+      shadow={'md'}
       
       >
         <Box flex='1' textAlign='left' fontWeight={600}>
@@ -98,7 +102,9 @@ I ended up designing, building and maintaining the company's main website includ
       <AccordionButton
       bg="gray.300"
       _dark={{ bg: "gray.500" }}
-      rounded={10}>
+      rounded={10}
+      shadow={'md'}>
+
         <Box flex='1' textAlign='left' fontWeight={600}>
           Currently
         </Box>
@@ -122,7 +128,7 @@ I ended up designing, building and maintaining the company's main website includ
     </Flex>
     </Box>
 
-    <Image src={Knight} rounded={20} width={'30%'} objectFit={'cover'}></Image>
+    <Image src={Knight12} rounded={20} width={'30%'} objectFit={'cover'} marginTop={8}></Image>
     
     </Flex>
     </Box>

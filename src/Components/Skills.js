@@ -1,6 +1,6 @@
 import React from 'react'
 import Skill from './Skill'
-import { Container, Flex, Heading } from '@chakra-ui/react'
+import { Container, Divider, Flex, Heading } from '@chakra-ui/react'
 
 
 
@@ -78,8 +78,9 @@ function Skills() {
     ]
 
   return (
-    <Container id={'skills'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10}>
-        <Heading margin={10} marginBottom={5}>Skills</Heading>
+    <Container id={'skills'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10} >
+        <Heading margin={10} className='heading' fontWeight={400} fontSize={'xxx-large'} marginBottom={0}>Skills / Tools</Heading>
+        
         <Flex gap={5} flexWrap={'wrap'}>
         {skills.map(skill => {
             return (

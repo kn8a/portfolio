@@ -44,9 +44,9 @@ function About() {
         mx="auto"
         marginTop={10}
       >
-        <Flex paddingTop={20} alignItems={'flex-start'} gap={'2rem'} border={0}>
-          <Box width={'70%'} border={0}>
-            <Flex>
+        <Flex paddingTop={20} alignItems={'flex-start'} gap={'2rem'} border={0} direction={{ base: 'column-reverse', md: 'row' }} justifyContent={'flex-start'}>
+          <Box  border={0}>
+            <Flex >
               <Accordion
                 defaultIndex={[2]}
                 width={'100'}
@@ -185,6 +185,7 @@ function About() {
                       _dark={{ bg: 'gray.500' }}
                       rounded={10}
                       shadow={'md'}
+                      
                     >
                       <Box flex="1" textAlign="left" fontWeight={600}>
                         Present
@@ -220,14 +221,17 @@ function About() {
               </Accordion>
             </Flex>
           </Box>
-
+          
           <Image
             src={knightimage}
             rounded={20}
-            width={'30%'}
+            alignSelf={'center'}
+            width={{ base: '50%', md: '30%' }}
             objectFit={'cover'}
             marginTop={8}
+            
           ></Image>
+          
         </Flex>
       </Container>
     </>

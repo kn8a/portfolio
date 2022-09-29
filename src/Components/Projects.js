@@ -137,6 +137,15 @@ function Projects() {
       demo: 'https://kn8a.github.io/tic-tac-toe/',
     },
     {
+        name: 'Restaurant app',
+        description: 'Restaurant site built entirely in JavaScript, CSS',
+        stack: 'JavaScript, CSS',
+        image:
+          'https://user-images.githubusercontent.com/88045655/155962189-808e06ee-be1f-4e00-bdd1-b49574f28c80.JPG',
+        repo: 'https://github.com/kn8a/restaurant',
+        demo: 'https://kn8a.github.io/restaurant/',
+      },
+    {
       name: 'Landing page',
       description: 'Mockup landing page',
       stack: 'HTML, CSS',
@@ -177,7 +186,7 @@ function Projects() {
             <Button
               size={'lg'}
               variant={'solid'}
-              shadow={'outline'}
+              shadow={'md'}
               ref={btnRef}
               onClick={onOpen}
             >
@@ -195,7 +204,7 @@ function Projects() {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton size={'lg'}/>
           <DrawerHeader>More projects</DrawerHeader>
 
           <DrawerBody>

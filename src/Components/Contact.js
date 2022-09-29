@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import {
   Container,
   FormControl,
@@ -15,53 +15,60 @@ import {
   Icon,
   Divider,
   Select,
+  useToast
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
+
+
 import { GoLocation } from 'react-icons/go';
 import { BsPhone } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
+
 
 const contactOptions = [
-  //   {
-  //     label: 'PHONE NUMBER',
-  //     value: '+1 5589 55488 55',
-  //     icon: BsPhone
-  //   },
-  //   {
-  //     label: 'EMAIL',
-  //     value: 'info@example.com',
-  //     icon: HiOutlineMail
-  //   }
+    // {
+    //   label: 'PHONE NUMBER',
+    //   value: '+1 5589 55488 55',
+    //   icon: BsPhone
+    // },
+    // {
+    //   label: 'EMAIL',
+    //   value: 'info@example.com',
+    //   icon: HiOutlineMail
+    // }
 ];
 
 const Contact = () => {
-    // const [formFields, setFormFields] = useState({
-    //     name: "",
-    //     email: "",
-    //     purpose: "",
-    //     message: "",
-    //   })
 
-    // const onFormChange = (e) => {
-    //     const value = e.target.value
-    //     setFormFields({
-    //   ...formFields,
-    //   [e.target.name]: value,
-    // })
-    // }
+    const [submittingForm, setSubmittingForm] = useState(false)
+    const toast = useToast()
 
     const sendEmail = (e) => {
+        setSubmittingForm(true)
         e.preventDefault()
         emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE, e.target, process.env.REACT_APP_USER_ID)
         .then((result) => {
-                console.log(result.text);
+                toast({
+                    description: 'Your message has been sent.',
+                    status: 'success',
+                    duration: 3000,
+                    isClosable: true,
+                    position: 'bottom'
+                })
+
             }, (error) => {
-                console.log(error.text);
+                toast({
+                    description: 'Message failed to submit, please retry.',
+                    status: 'error',
+                    duration: 3000,
+                    isClosable: true,
+                    position: 'bottom'
+                })
             });
         e.target.reset()
+        setSubmittingForm(false)
     }
+
   return (
     <Container
       id={'contact'}
@@ -126,21 +133,15 @@ const Contact = () => {
           p={{ base: 5, sm: 10 }}
           onSubmit={sendEmail}
         >
-           
           <VStack spacing={4} w="100%">
-            
-
-            
             <Stack
               w="100%"
               spacing={3}
               direction={{ base: 'column', md: 'row' }}
-              
             >
               <FormControl id="name">
                 <FormLabel>Your Name</FormLabel>
                 <Input
-
                 name='name'
                   type="text"
                   placeholder="First, Last"
@@ -204,6 +205,8 @@ const Contact = () => {
               rounded="md"
               w={{ base: '100%', md: 'max-content' }}
               type={'submit'}
+              isLoading={submittingForm}
+                loadingText='Submitting'
             >
               Send Message
             </Button>

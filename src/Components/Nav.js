@@ -71,6 +71,7 @@ export default function Nav() {
               spacing={1}
               mr={1}
               color="brand.500"
+              
               display={{
                 base: 'none',
                 md: 'inline-flex',
@@ -81,14 +82,15 @@ export default function Nav() {
                   About
                 </Button>
               </AnchorLink>
-              <AnchorLink href="#skills">
-                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
-                  Skills
-                </Button>
-              </AnchorLink>
+              
               <AnchorLink href="#projects">
                 <Button variant="ghost" fontSize={'large'} fontWeight={400}>
                   Projects
+                </Button>
+              </AnchorLink>
+              <AnchorLink href="#skills">
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  Skills
                 </Button>
               </AnchorLink>
               <AnchorLink href="#contact">
@@ -96,9 +98,9 @@ export default function Nav() {
                   Contact
                 </Button>
               </AnchorLink>
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+              {/* <Button variant="ghost" fontSize={'large'} fontWeight={400}>
                 Resume
-              </Button>
+              </Button> */}
             </HStack>
             <ColorModeSwitcher />
 
@@ -132,33 +134,45 @@ export default function Nav() {
                 display={mobileNav.isOpen ? 'flex' : 'none'}
                 flexDirection="column"
                 p={2}
-                pb={4}
+                pb={10}
                 m={2}
-                bg={bg}
-                spacing={3}
+                
+                spacing={10}
                 rounded="sm"
                 shadow="sm"
+                bg="gray.100"
+                _dark={{ bg: 'gray.700' }}
+
               >
                 <CloseButton
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
+                  size={'lg'}
                 />
 
-                <Button w="full" variant="ghost">
-                  Features
+                <AnchorLink href="#about">
+                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
+                  About
                 </Button>
-                <Button w="full" variant="ghost">
-                  Pricing
+                </AnchorLink>
+                <AnchorLink href="#projects">
+                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
+                  Projects
                 </Button>
-                <Button w="full" variant="ghost">
-                  Blog
+                </AnchorLink>
+                <AnchorLink href="#skills">
+                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
+                  Skills
                 </Button>
-                <Button w="full" variant="ghost">
-                  Company
+                </AnchorLink>
+                <AnchorLink href="#contact">
+                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
+                  Contact
                 </Button>
-                <Button w="full" variant="ghost">
-                  Sign in
-                </Button>
+                </AnchorLink>
+                {/* <Button w="full" variant="ghost">
+                  Resume
+                </Button> */}
               </VStack>
             </Box>
           </HStack>

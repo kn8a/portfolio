@@ -24,6 +24,7 @@ import Tools from './Components/Tools';
 import Contact from './Components/Contact';
 import theme from './theme';
 import Background from './Components/Background';
+import Footer from './Components/Footer';
 
 
 
@@ -40,7 +41,7 @@ function App() {
         <Projects/>
         <Skills/>
         <Contact/>
-        
+        <Footer/>
     </ChakraProvider>
     
     

@@ -39,9 +39,7 @@ const InfoSection = () => {
             fontSize={{ base: '2.5rem', sm: '3rem' }}
           >
             Hi! <div id='hand'>👋</div>
-            <br /> I am a Andrew Knight,<br /> a Full-Stack 
-
-            Developer
+            <br /> I am a Andrew Knight,<br /> a Full-Stack Developer
 
           
           </Heading>

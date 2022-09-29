@@ -75,7 +75,8 @@ const Contact = () => {
           as="form"
           spacing={8}
           w="100%"
-          bg={useColorModeValue('white', 'gray.700')}
+          bg="gray.50"
+        _dark={{ bg: "gray.900" }}
           rounded="lg"
           boxShadow="lg"
           p={{ base: 5, sm: 10 }}
@@ -84,16 +85,16 @@ const Contact = () => {
             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
               <FormControl id="name">
                 <FormLabel>Your Name</FormLabel>
-                <Input type="text" placeholder='First, Last' rounded="md" />
+                <Input type="text" placeholder='First, Last' rounded="md" bg={'white'} _dark={{ bg: "gray.800" }} shadow={'inner'}/>
               </FormControl>
               <FormControl id="email">
                 <FormLabel>Your Email</FormLabel>
-                <Input type="email" placeholder="test@test.com" rounded="md" />
+                <Input type="email" placeholder="test@test.com" rounded="md" bg={'white'} _dark={{ bg: "gray.800" }} shadow={'inner'}/>
               </FormControl>
             </Stack>
             <FormControl id="subject">
               <FormLabel>Purpose</FormLabel>
-              <Select placeholder='Select option'>
+              <Select placeholder='Select option' bg={'white'} _dark={{ bg: "gray.800" }} shadow={'inner'}>
                 <option value='hire'>Hire for full/part time</option>
                 <option value='freelance'>Freelance work</option>
                 <option value='startup'>Join a startup</option>
@@ -103,7 +104,7 @@ const Contact = () => {
             </FormControl>
             <FormControl id="message">
               <FormLabel>Message</FormLabel>
-              <Textarea size="lg" placeholder="Enter your message" rounded="md" />
+              <Textarea size="lg" placeholder="Enter your message" rounded="md" bg={'white'} _dark={{ bg: "gray.800" }} shadow={'inner'}/>
             </FormControl>
           </VStack>
           <VStack w="100%">

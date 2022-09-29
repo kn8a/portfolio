@@ -24,7 +24,7 @@ function About() {
 
   return (
     <>
-    <Container id={'contact'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10}>
+    <Container id={'about'} maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" marginTop={10}>
 
     
     

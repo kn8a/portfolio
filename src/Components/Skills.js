@@ -74,6 +74,15 @@ function Skills() {
         name: 'Jest',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg'
     },
+    {
+        name: 'VSCode',
+        img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'
+    },
+    {
+        name: 'Linux',
+        img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'
+    },
+    
 
     ]
 

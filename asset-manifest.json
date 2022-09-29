@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.606e1731.css",
+    "main.js": "/portfolio/static/js/main.0c357085.js",
+    "static/js/787.fed5dbeb.chunk.js": "/portfolio/static/js/787.fed5dbeb.chunk.js",
+    "static/media/ChessKnight.svg": "/portfolio/static/media/ChessKnight.523bf07d4fda774067f6e4f99d2a4d3b.svg",
+    "static/media/la-belle-aurore-all-400-normal.woff": "/portfolio/static/media/la-belle-aurore-all-400-normal.68be3bd58258f1c49a7a.woff",
+    "static/media/la-belle-aurore-latin-400-normal.woff2": "/portfolio/static/media/la-belle-aurore-latin-400-normal.2a89aebf652f3b0aae99.woff2",
+    "static/media/knight-gd1.svg": "/portfolio/static/media/knight-gd1.08e91fc24d1ae2129d6c19ef18d5d52b.svg",
+    "static/media/knight-gl.svg": "/portfolio/static/media/knight-gl.66a7b7a2e7271821c371eb6537d0ade7.svg",
+    "index.html": "/portfolio/index.html",
+    "main.606e1731.css.map": "/portfolio/static/css/main.606e1731.css.map",
+    "main.0c357085.js.map": "/portfolio/static/js/main.0c357085.js.map",
+    "787.fed5dbeb.chunk.js.map": "/portfolio/static/js/787.fed5dbeb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.606e1731.css",
+    "static/js/main.0c357085.js"
+  ]
+}

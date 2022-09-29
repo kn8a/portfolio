@@ -1,9 +1,8 @@
-import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { FaChessKnight } from "react-icons/fa";
-import { Icon, Image } from "@chakra-ui/react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import React from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { FaChessKnight } from 'react-icons/fa';
+import { Icon, Image } from '@chakra-ui/react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {
   chakra,
@@ -17,18 +16,17 @@ import {
   VStack,
   IconButton,
   CloseButton,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 export default function Nav() {
-  const bg = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue('white', 'gray.800');
   const mobileNav = useDisclosure();
   return (
     <React.Fragment>
       <chakra.header
-        
-        position={"fixed"}
+        position={'fixed'}
         bg={bg}
         w="full"
         px={{
@@ -40,25 +38,33 @@ export default function Nav() {
         shadow="md"
         zIndex={1}
         borderBottom={'1px white solid'}
-        
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          <Flex alignItems="center" >
-            
-          <AnchorLink href="#top" title="Kn8 Home Page">
-              
-              <Icon as={FaChessKnight} display={'flex'} alignItems="center" boxSize={'1.5rem'}/>
-              </AnchorLink>
-              
-              <AnchorLink href="#top" title="Kn8 Home Page">
-              
-              <Flex ml="2" fontSize="xl" fontWeight="600" alignSelf={'center'} alignItems={'center'}>Kn8</Flex>
-              </AnchorLink>
-            
+          <Flex alignItems="center">
+            <AnchorLink href="#top" title="Kn8 Home Page">
+              <Icon
+                as={FaChessKnight}
+                display={'flex'}
+                alignItems="center"
+                boxSize={'1.5rem'}
+              />
+            </AnchorLink>
+
+            <AnchorLink href="#top" title="Kn8 Home Page">
+              <Flex
+                ml="2"
+                fontSize="xl"
+                fontWeight="600"
+                alignSelf={'center'}
+                alignItems={'center'}
+              >
+                Kn8
+              </Flex>
+            </AnchorLink>
+
             {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
               Kn8
             </chakra.h1> */}
-            
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -66,43 +72,52 @@ export default function Nav() {
               mr={1}
               color="brand.500"
               display={{
-                base: "none",
-                md: "inline-flex",
+                base: 'none',
+                md: 'inline-flex',
               }}
             >
-              <AnchorLink href="#about"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>About</Button>
+              <AnchorLink href="#about">
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  About
+                </Button>
               </AnchorLink>
-              <AnchorLink href="#skills"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Skills</Button>
+              <AnchorLink href="#skills">
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  Skills
+                </Button>
               </AnchorLink>
-              <AnchorLink href="#projects"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Projects</Button>
+              <AnchorLink href="#projects">
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  Projects
+                </Button>
               </AnchorLink>
-              <AnchorLink href="#contact"> 
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Contact</Button>
+              <AnchorLink href="#contact">
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  Contact
+                </Button>
               </AnchorLink>
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>Resume</Button>
-              
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                Resume
+              </Button>
             </HStack>
-            <ColorModeSwitcher/>
-            
+            <ColorModeSwitcher />
+
             <Box
               display={{
-                base: "inline-flex",
-                md: "none",
+                base: 'inline-flex',
+                md: 'none',
               }}
             >
               <IconButton
                 display={{
-                  base: "flex",
-                  md: "none",
+                  base: 'flex',
+                  md: 'none',
                 }}
                 aria-label="Open menu"
                 fontSize="20px"
                 color="gray.800"
                 _dark={{
-                  color: "inherit",
+                  color: 'inherit',
                 }}
                 variant="ghost"
                 icon={<AiOutlineMenu />}
@@ -114,7 +129,7 @@ export default function Nav() {
                 top={0}
                 left={0}
                 right={0}
-                display={mobileNav.isOpen ? "flex" : "none"}
+                display={mobileNav.isOpen ? 'flex' : 'none'}
                 flexDirection="column"
                 p={2}
                 pb={4}

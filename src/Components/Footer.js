@@ -1,14 +1,14 @@
-import React from "react";
-import { chakra, Flex, Icon } from "@chakra-ui/react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import { FaChessKnight } from "react-icons/fa";
+import React from 'react';
+import { chakra, Flex, Icon } from '@chakra-ui/react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FaChessKnight } from 'react-icons/fa';
 
-export default function Footer(){
+export default function Footer() {
   return (
     <Flex
       w="full"
       bg="#edf3f8"
-      _dark={{ bg: "#3e3e3e" }}
+      _dark={{ bg: '#3e3e3e' }}
       p={0}
       alignItems="center"
       justifyContent="center"
@@ -16,38 +16,47 @@ export default function Footer(){
       <Flex
         w="full"
         as="footer"
-        flexDir={{ base: "column", sm: "row" }}
+        flexDir={{ base: 'column', sm: 'row' }}
         align="center"
         justify="space-between"
         px="6"
         py="4"
         bg="white"
         _dark={{
-          bg: "gray.800",
+          bg: 'gray.800',
         }}
       >
-        <Flex alignItems="center" >
-            
-            <AnchorLink href="#top" title="Kn8 Home Page">
-                
-                <Icon as={FaChessKnight} display={'flex'} alignItems="center" boxSize={'1.5rem'}/>
-                </AnchorLink>
-                
-                <AnchorLink href="#top" title="Kn8 Home Page">
-                
-                <Flex ml="2" fontSize="xl" fontWeight="600" alignSelf={'center'} alignItems={'center'}>Kn8</Flex>
-                </AnchorLink>
-              
-              {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
+        <Flex alignItems="center">
+          <AnchorLink href="#top" title="Kn8 Home Page">
+            <Icon
+              as={FaChessKnight}
+              display={'flex'}
+              alignItems="center"
+              boxSize={'1.5rem'}
+            />
+          </AnchorLink>
+
+          <AnchorLink href="#top" title="Kn8 Home Page">
+            <Flex
+              ml="2"
+              fontSize="xl"
+              fontWeight="600"
+              alignSelf={'center'}
+              alignItems={'center'}
+            >
+              Kn8
+            </Flex>
+          </AnchorLink>
+
+          {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
                 Kn8
               </chakra.h1> */}
-              
-            </Flex>
+        </Flex>
 
         <chakra.p
-          py={{ base: "2", sm: "0" }}
+          py={{ base: '2', sm: '0' }}
           color="gray.800"
-          _dark={{ color: "white" }}
+          _dark={{ color: 'white' }}
         >
           All rights reserved
         </chakra.p>
@@ -57,9 +66,9 @@ export default function Footer(){
             href="#"
             mx="2"
             color="gray.600"
-            _dark={{ color: "gray.300", _hover: { color: "gray.400" } }}
+            _dark={{ color: 'gray.300', _hover: { color: 'gray.400' } }}
             _hover={{
-              color: "gray.500",
+              color: 'gray.500',
             }}
             aria-label="Reddit"
           >
@@ -72,9 +81,9 @@ export default function Footer(){
             href="#"
             mx="2"
             color="gray.600"
-            _dark={{ color: "gray.300", _hover: { color: "gray.400" } }}
+            _dark={{ color: 'gray.300', _hover: { color: 'gray.400' } }}
             _hover={{
-              color: "gray.500",
+              color: 'gray.500',
             }}
             aria-label="Facebook"
           >
@@ -87,9 +96,9 @@ export default function Footer(){
             href="#"
             mx="2"
             color="gray.600"
-            _dark={{ color: "gray.300", _hover: { color: "gray.400" } }}
+            _dark={{ color: 'gray.300', _hover: { color: 'gray.400' } }}
             _hover={{
-              color: "gray.500",
+              color: 'gray.500',
             }}
             aria-label="Github"
           >
@@ -101,4 +110,4 @@ export default function Footer(){
       </Flex>
     </Flex>
   );
-};
+}

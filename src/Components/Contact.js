@@ -20,6 +20,8 @@ import {
 import { GoLocation } from 'react-icons/go';
 import { BsPhone } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const contactOptions = [
   //   {
@@ -35,6 +37,31 @@ const contactOptions = [
 ];
 
 const Contact = () => {
+    // const [formFields, setFormFields] = useState({
+    //     name: "",
+    //     email: "",
+    //     purpose: "",
+    //     message: "",
+    //   })
+
+    // const onFormChange = (e) => {
+    //     const value = e.target.value
+    //     setFormFields({
+    //   ...formFields,
+    //   [e.target.name]: value,
+    // })
+    // }
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE, e.target, process.env.REACT_APP_USER_ID)
+        .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    }
   return (
     <Container
       id={'contact'}
@@ -97,27 +124,38 @@ const Contact = () => {
           rounded="lg"
           boxShadow="lg"
           p={{ base: 5, sm: 10 }}
+          onSubmit={sendEmail}
         >
+           
           <VStack spacing={4} w="100%">
+            
+
+            
             <Stack
               w="100%"
               spacing={3}
               direction={{ base: 'column', md: 'row' }}
+              
             >
               <FormControl id="name">
                 <FormLabel>Your Name</FormLabel>
                 <Input
+
+                name='name'
                   type="text"
                   placeholder="First, Last"
                   rounded="md"
                   bg={'white'}
                   _dark={{ bg: 'gray.800' }}
                   shadow={'inner'}
+                  required
                 />
               </FormControl>
               <FormControl id="email">
                 <FormLabel>Your Email</FormLabel>
                 <Input
+
+                name='email'
                   type="email"
                   placeholder="test@test.com"
                   rounded="md"
@@ -127,13 +165,16 @@ const Contact = () => {
                 />
               </FormControl>
             </Stack>
-            <FormControl id="subject">
+            <FormControl id="purpose">
               <FormLabel>Purpose</FormLabel>
               <Select
+
+              name='purpose'
                 placeholder="Select option"
                 bg={'white'}
                 _dark={{ bg: 'gray.800' }}
                 shadow={'inner'}
+                required
               >
                 <option value="hire">Hire for full/part time</option>
                 <option value="freelance">Freelance work</option>
@@ -145,6 +186,8 @@ const Contact = () => {
             <FormControl id="message">
               <FormLabel>Message</FormLabel>
               <Textarea
+
+              name='message'
                 size="lg"
                 placeholder="Enter your message"
                 rounded="md"
@@ -154,20 +197,20 @@ const Contact = () => {
               />
             </FormControl>
           </VStack>
+          
           <VStack w="100%">
             <Button
-              bg="green.300"
-              color="white"
-              _hover={{
-                bg: 'green.500',
-              }}
+              colorScheme={'green'}
               rounded="md"
               w={{ base: '100%', md: 'max-content' }}
+              type={'submit'}
             >
               Send Message
             </Button>
           </VStack>
+          
         </VStack>
+        
       </Stack>
     </Container>
   );

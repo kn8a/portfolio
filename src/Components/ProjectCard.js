@@ -8,6 +8,7 @@ import {
   IconButton,
   Link,
   Divider,
+  Button
 } from '@chakra-ui/react';
 
 import { MdEmail, MdHeadset, MdLocationOn } from 'react-icons/md';
@@ -98,17 +99,24 @@ export default function ProjectCard(props) {
             _dark={{ color: 'gray.200' }}
           >
             <Link href={project.repo} isExternal title="Repository">
-              <IconButton
+              {/* <IconButton
                 colorScheme="gray"
                 icon={<AiFillGithub size={'1.5rem'} />}
                 aria-label="Repository"
-              ></IconButton>
+              ></IconButton> */}
+              <Button leftIcon={<AiFillGithub size={'1.5rem'} />} variant='solid'>
+                Source
+              </Button>
+              
             </Link>
             <Link href={project.demo} isExternal title="View demo">
-              <IconButton
+              {/* <IconButton
                 icon={<FaExternalLinkAlt size={'1.3rem'} />}
                 aria-label="View demo"
-              ></IconButton>
+              ></IconButton> */}
+              <Button leftIcon={<FaExternalLinkAlt size={'1.5rem'} />} variant='solid'>
+                Demo
+              </Button>
             </Link>
           </Flex>
         </Box>

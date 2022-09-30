@@ -23,6 +23,9 @@ import {
   FaTwitter,
 } from 'react-icons/fa';
 
+import { RandomReveal } from "react-random-reveal";
+import CypherText from 'react-cypher-text-loop'
+
 const iconProps = {
   variant: 'ghost',
   size: 'lg',
@@ -31,31 +34,41 @@ const iconProps = {
 
 const InfoSection = () => {
   return (
-    <Container maxW="7xl" p={{ base: 5, md: 10 }} mx="auto" id={'top'}>
-      <VStack
+    <Container maxW="7xl" p={{ base: 5, md: 10 }}  pb={0} mx="auto" mb={0} id={'top'}>
+      <VStack 
         spacing={4}
         px={2}
         alignItems={{ base: 'center', sm: 'flex-start' }}
+        mb={0} pb={0}
       >
-        <Stack justifyContent="center" alignItems="center">
+        <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
           <Text fontSize="sm" marginTop={20}></Text>
         </Stack>
         <Heading
-          textAlign={{ base: 'center', sm: 'left' }}
+          textAlign={{ base: 'left', sm: 'left' }}
           margin="0 auto"
           width={{ base: '23rem', sm: 'auto' }}
-          fontSize={{ base: '2.5rem', sm: '3rem' }}
+          fontSize={{ base: '1.7rem', 'md': '3rem' }}
+          fontFamily={'font1'}
         >
           Hi! <div id="hand">👋</div>
-          <br /> I am a Andrew Knight,
-          <br /> a Full-Stack Developer
+          <br />I am {process.env.REACT_APP_NAME},
+
+          <br /> 
+          <Flex>
+            <CypherText textList={['a Chess player.','a Programmer.','a Full-stack Developer.', 'a Tennis Player.', 'a learner.', 'a creator.', 'a traveler.', ]} delay={800} />
+          </Flex>
+           
+            
+          
+
         </Heading>
-        <Text textAlign="center">
+        <Text textAlign="left">
           Passionate about Tech. Lover of web and opensource.
         </Text>
-        <Divider />
-        <Flex alignItems="center" justify="left" w="100%">
-          <Box textAlign="center">
+        {/* <Divider /> */}
+        {/* <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
+          <Box textAlign="center" mb={0} pb={0}>
             {accounts.map((sc, index) => (
               <IconButton
                 key={index}
@@ -70,7 +83,7 @@ const InfoSection = () => {
               />
             ))}
           </Box>
-        </Flex>
+        </Flex> */}
       </VStack>
     </Container>
   );

@@ -94,7 +94,7 @@ function Skills() {
         margin={10}
         fontFamily={'font1'}
         fontWeight={400}
-        fontSize={'xxx-large'}
+        fontSize={'xx-large'}
         marginBottom={0}
       >
         Skills / Tools

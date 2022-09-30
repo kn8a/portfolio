@@ -84,7 +84,7 @@ const Contact = () => {
             mb={2}
             fontFamily={'font1'}
             fontWeight={400}
-            fontSize={'xxx-large'}
+            fontSize={'xx-large'}
           >
             Contact me
           </Heading>

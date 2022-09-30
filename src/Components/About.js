@@ -44,7 +44,7 @@ function About() {
         mx="auto"
         marginTop={10}
       >
-        <Flex paddingTop={20} alignItems={'flex-start'} gap={'2rem'} border={0} direction={{ base: 'column-reverse', md: 'row' }} justifyContent={'flex-start'}>
+        <Flex paddingTop={10} alignItems={'flex-start'} gap={'2rem'} border={0} direction={{ base: 'column-reverse', md: 'row' }} justifyContent={'flex-start'}>
           <Box  border={0}>
             <Flex >
               <Accordion
@@ -66,7 +66,7 @@ function About() {
                   marginBottom={0}
                   fontFamily={'font1'}
                   fontWeight={400}
-                  fontSize={'xxx-large'}
+                  fontSize={'xx-large'}
                 >
                   About me
                 </Heading>
@@ -223,6 +223,7 @@ function About() {
           </Box>
           
           <Image
+            id='knightImg'
             src={knightimage}
             rounded={20}
             alignSelf={'center'}

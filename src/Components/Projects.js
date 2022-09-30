@@ -75,7 +75,7 @@ function Projects() {
     },
     {
       name: 'Admin dashboard',
-      description: 'Social media app inspired by Facebook',
+      description: 'Mockup dashboard (CSS Grid practice)',
       stack: 'HTML, CSS (Grid)',
       image:
         'https://user-images.githubusercontent.com/88045655/192804753-bdb98acf-6cc5-4ff8-886e-1abf7e668fdd.JPG',
@@ -170,7 +170,7 @@ function Projects() {
           marginBottom={0}
           fontFamily={'font1'}
           fontWeight={400}
-          fontSize={'xxx-large'}
+          fontSize={'xx-large'}
         >
           Projects
         </Heading>

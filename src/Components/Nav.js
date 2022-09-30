@@ -57,6 +57,7 @@ export default function Nav() {
                 fontWeight="600"
                 alignSelf={'center'}
                 alignItems={'center'}
+                fontFamily={'font1'}
               >
                 Kn8
               </Flex>

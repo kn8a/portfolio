@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fc09f939.css",
-    "main.js": "/portfolio/static/js/main.d5bfa7c8.js",
+    "main.js": "/portfolio/static/js/main.3b6ccb83.js",
     "static/js/787.fed5dbeb.chunk.js": "/portfolio/static/js/787.fed5dbeb.chunk.js",
     "static/media/montserrat-alternates-all-400-normal.woff": "/portfolio/static/media/montserrat-alternates-all-400-normal.86a7729ed5eaeaccbbff.woff",
     "static/media/montserrat-all-400-normal.woff": "/portfolio/static/media/montserrat-all-400-normal.327fab0afc997a2d9b16.woff",
     "static/media/vt323-all-400-normal.woff": "/portfolio/static/media/vt323-all-400-normal.e2f1761188760cc5bcfe.woff",
-    "static/media/ChessKnight.svg": "/portfolio/static/media/ChessKnight.523bf07d4fda774067f6e4f99d2a4d3b.svg",
     "static/media/la-belle-aurore-all-400-normal.woff": "/portfolio/static/media/la-belle-aurore-all-400-normal.68be3bd58258f1c49a7a.woff",
     "static/media/montserrat-alternates-latin-400-normal.woff2": "/portfolio/static/media/montserrat-alternates-latin-400-normal.f213d57eadd8207d03f9.woff2",
     "static/media/la-belle-aurore-latin-400-normal.woff2": "/portfolio/static/media/la-belle-aurore-latin-400-normal.2a89aebf652f3b0aae99.woff2",
@@ -26,11 +25,11 @@
     "static/media/knight-gl.svg": "/portfolio/static/media/knight-gl.66a7b7a2e7271821c371eb6537d0ade7.svg",
     "index.html": "/portfolio/index.html",
     "main.fc09f939.css.map": "/portfolio/static/css/main.fc09f939.css.map",
-    "main.d5bfa7c8.js.map": "/portfolio/static/js/main.d5bfa7c8.js.map",
+    "main.3b6ccb83.js.map": "/portfolio/static/js/main.3b6ccb83.js.map",
     "787.fed5dbeb.chunk.js.map": "/portfolio/static/js/787.fed5dbeb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc09f939.css",
-    "static/js/main.d5bfa7c8.js"
+    "static/js/main.3b6ccb83.js"
   ]
 }

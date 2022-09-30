@@ -34,19 +34,21 @@ const iconProps = {
 
 const InfoSection = () => {
   return (
-    <Container maxW="7xl" p={{ base: 5, md: 10 }}  pb={0} mx="auto" mb={0} id={'top'}>
+    <Container maxW="7xl" p={{ base: 5, md: 10 }}  pb={0}  mb={0} id={'top'}>
       <VStack 
-        spacing={4}
+        spacing={6}
         px={2}
-        alignItems={{ base: 'center', sm: 'flex-start' }}
+        alignItems={{ base: 'flex-start', sm: 'flex-start' }}
         mb={0} pb={0}
+        pl={{ base: '2px', md: 0}}
       >
         <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
           <Text fontSize="sm" marginTop={20}></Text>
         </Stack>
         <Heading
+          
           textAlign={{ base: 'left', sm: 'left' }}
-          margin="0 auto"
+          // margin="0 auto"
           width={{ base: '23rem', sm: 'auto' }}
           fontSize={{ base: '1.7rem', 'md': '3rem' }}
           fontFamily={'font1'}

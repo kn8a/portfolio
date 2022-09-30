@@ -26,9 +26,10 @@ export default function Nav() {
   return (
     <React.Fragment>
       <chakra.header
+      
         position={'fixed'}
         bg={bg}
-        w="full"
+        w="100vw"
         px={{
           base: 2,
           sm: 4,
@@ -52,7 +53,7 @@ export default function Nav() {
 
             <AnchorLink href="#top" title="Kn8 Home Page">
               <Flex
-                ml="2"
+                pl="2"
                 fontSize="xl"
                 fontWeight="600"
                 alignSelf={'center'}
@@ -70,7 +71,7 @@ export default function Nav() {
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
               spacing={1}
-              mr={1}
+              mr={0}
               color="brand.500"
               
               display={{
@@ -110,6 +111,7 @@ export default function Nav() {
                 base: 'inline-flex',
                 md: 'none',
               }}
+              m={0}
             >
               <IconButton
                 display={{
@@ -136,7 +138,7 @@ export default function Nav() {
                 flexDirection="column"
                 p={2}
                 pb={10}
-                m={2}
+                // m={2}
                 
                 spacing={10}
                 rounded="sm"

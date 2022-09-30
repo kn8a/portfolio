@@ -196,13 +196,14 @@ function Projects() {
         </Grid>
       </Container>
       <Drawer
+
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'md'}
+        size={{base:'sm' ,md:'md'}}
       >
-        <DrawerOverlay />
+        <DrawerOverlay w={'100vw'}/>
         <DrawerContent>
           <DrawerCloseButton size={'lg'}/>
           <DrawerHeader>More projects</DrawerHeader>
@@ -217,8 +218,8 @@ function Projects() {
             })}
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+          <DrawerFooter alignContent={'center'}>
+            <Button variant="outline" mx={'auto'} onClick={onClose}>
               Close
             </Button>
           </DrawerFooter>

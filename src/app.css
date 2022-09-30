@@ -72,8 +72,11 @@ body {
     height: 20px;
     background: rgba(0, 0, 0, 0.01);
     animation: animate 25s linear infinite;
-    top: -100px;
-    
+    top: -100px;    
+}
+
+.fallingSquare:hover {
+    background: white;
 }
 
 .circles li:nth-child(1){

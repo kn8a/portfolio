@@ -137,14 +137,14 @@ function Projects() {
       demo: 'https://kn8a.github.io/tic-tac-toe/',
     },
     {
-        name: 'Restaurant app',
-        description: 'Restaurant site built entirely in JavaScript, CSS',
-        stack: 'JavaScript, CSS',
-        image:
-          'https://user-images.githubusercontent.com/88045655/155962189-808e06ee-be1f-4e00-bdd1-b49574f28c80.JPG',
-        repo: 'https://github.com/kn8a/restaurant',
-        demo: 'https://kn8a.github.io/restaurant/',
-      },
+      name: 'Restaurant app',
+      description: 'Restaurant site built entirely in JavaScript, CSS',
+      stack: 'JavaScript, CSS',
+      image:
+        'https://user-images.githubusercontent.com/88045655/155962189-808e06ee-be1f-4e00-bdd1-b49574f28c80.JPG',
+      repo: 'https://github.com/kn8a/restaurant',
+      demo: 'https://kn8a.github.io/restaurant/',
+    },
     {
       name: 'Landing page',
       description: 'Mockup landing page',
@@ -196,18 +196,16 @@ function Projects() {
         </Grid>
       </Container>
       <Drawer
-
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={{base:'sm' ,md:'md'}}
+        size={{ base: 'sm', md: 'md' }}
       >
-        <DrawerOverlay w={'100vw'}/>
+        <DrawerOverlay w={'100vw'} />
         <DrawerContent>
-          <DrawerCloseButton size={'lg'}/>
+          <DrawerCloseButton size={'lg'} />
           <DrawerHeader>More projects</DrawerHeader>
-
           <DrawerBody>
             {projects.slice(drawerBreakpoint).map(project => {
               return (
@@ -217,7 +215,6 @@ function Projects() {
               );
             })}
           </DrawerBody>
-
           <DrawerFooter alignContent={'center'}>
             <Button variant="outline" mx={'auto'} onClick={onClose}>
               Close

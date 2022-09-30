@@ -1,6 +1,6 @@
 import React from 'react';
 import Skill from './Skill';
-import { Container, Divider, Flex, Heading } from '@chakra-ui/react';
+import { Container, Flex, Heading } from '@chakra-ui/react';
 
 function Skills() {
   const skills = [

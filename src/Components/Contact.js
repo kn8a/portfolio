@@ -8,66 +8,71 @@ import {
   Stack,
   Button,
   Heading,
-  useColorModeValue,
+//  useColorModeValue,
   VStack,
   Flex,
   Text,
   Icon,
   Divider,
   Select,
-  useToast
+  useToast,
 } from '@chakra-ui/react';
 
-
-import { GoLocation } from 'react-icons/go';
-import { BsPhone } from 'react-icons/bs';
-import { HiOutlineMail } from 'react-icons/hi';
+//import { GoLocation } from 'react-icons/go';
+//import { BsPhone } from 'react-icons/bs';
+//import { HiOutlineMail } from 'react-icons/hi';
 import emailjs from '@emailjs/browser';
 
-
 const contactOptions = [
-    // {
-    //   label: 'PHONE NUMBER',
-    //   value: '+1 5589 55488 55',
-    //   icon: BsPhone
-    // },
-    // {
-    //   label: 'EMAIL',
-    //   value: 'info@example.com',
-    //   icon: HiOutlineMail
-    // }
+  // {
+  //   label: 'PHONE NUMBER',
+  //   value: '+1 5589 55488 55',
+  //   icon: BsPhone
+  // },
+  // {
+  //   label: 'EMAIL',
+  //   value: 'info@example.com',
+  //   icon: HiOutlineMail
+  // }
 ];
 
 const Contact = () => {
+  const [submittingForm, setSubmittingForm] = useState(false);
+  const toast = useToast();
 
-    const [submittingForm, setSubmittingForm] = useState(false)
-    const toast = useToast()
-
-    const sendEmail = (e) => {
-        setSubmittingForm(true)
-        e.preventDefault()
-        emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLATE, e.target, process.env.REACT_APP_USER_ID)
-        .then((result) => {
-                toast({
-                    description: 'Your message has been sent.',
-                    status: 'success',
-                    duration: 3000,
-                    isClosable: true,
-                    position: 'bottom'
-                })
-
-            }, (error) => {
-                toast({
-                    description: 'Message failed to submit, please retry.',
-                    status: 'error',
-                    duration: 3000,
-                    isClosable: true,
-                    position: 'bottom'
-                })
-            });
-        e.target.reset()
-        setSubmittingForm(false)
-    }
+  const sendEmail = e => {
+    setSubmittingForm(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
+        e.target,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        result => {
+          toast({
+            description: 'Your message has been sent.',
+            status: 'success',
+            duration: 3000,
+            isClosable: true,
+            position: 'bottom',
+          });
+        },
+        error => {
+          toast({
+            description: 'Message failed to submit, please retry.',
+            status: 'error',
+            duration: 3000,
+            isClosable: true,
+            position: 'bottom',
+          });
+        }
+      );
+    e.target.reset();
+    setSubmittingForm(false);
+  };
 
   return (
     <Container
@@ -142,7 +147,7 @@ const Contact = () => {
               <FormControl id="name">
                 <FormLabel>Your Name</FormLabel>
                 <Input
-                name='name'
+                  name="name"
                   type="text"
                   placeholder="First, Last"
                   rounded="md"
@@ -155,8 +160,7 @@ const Contact = () => {
               <FormControl id="email">
                 <FormLabel>Your Email</FormLabel>
                 <Input
-
-                name='email'
+                  name="email"
                   type="email"
                   placeholder="test@test.com"
                   rounded="md"
@@ -169,8 +173,7 @@ const Contact = () => {
             <FormControl id="purpose">
               <FormLabel>Purpose</FormLabel>
               <Select
-
-              name='purpose'
+                name="purpose"
                 placeholder="Select option"
                 bg={'white'}
                 _dark={{ bg: 'gray.800' }}
@@ -187,8 +190,7 @@ const Contact = () => {
             <FormControl id="message">
               <FormLabel>Message</FormLabel>
               <Textarea
-
-              name='message'
+                name="message"
                 size="lg"
                 placeholder="Enter your message"
                 rounded="md"
@@ -198,7 +200,6 @@ const Contact = () => {
               />
             </FormControl>
           </VStack>
-          
           <VStack w="100%">
             <Button
               colorScheme={'green'}
@@ -206,14 +207,12 @@ const Contact = () => {
               w={{ base: '100%', md: 'max-content' }}
               type={'submit'}
               isLoading={submittingForm}
-                loadingText='Submitting'
+              loadingText="Submitting"
             >
               Send Message
             </Button>
           </VStack>
-          
         </VStack>
-        
       </Stack>
     </Container>
   );

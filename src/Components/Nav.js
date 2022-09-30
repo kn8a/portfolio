@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaChessKnight } from 'react-icons/fa';
-import { Icon, Image } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {
@@ -9,7 +9,6 @@ import {
   Box,
   Flex,
   useColorModeValue,
-  VisuallyHidden,
   HStack,
   Button,
   useDisclosure,
@@ -26,7 +25,6 @@ export default function Nav() {
   return (
     <React.Fragment>
       <chakra.header
-      
         position={'fixed'}
         bg={bg}
         w="100vw"
@@ -50,7 +48,6 @@ export default function Nav() {
                 boxSize={'1.5rem'}
               />
             </AnchorLink>
-
             <AnchorLink href="#top" title="Kn8 Home Page">
               <Flex
                 pl="2"
@@ -63,7 +60,6 @@ export default function Nav() {
                 Kn8
               </Flex>
             </AnchorLink>
-
             {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
               Kn8
             </chakra.h1> */}
@@ -73,7 +69,6 @@ export default function Nav() {
               spacing={1}
               mr={0}
               color="brand.500"
-              
               display={{
                 base: 'none',
                 md: 'inline-flex',
@@ -84,7 +79,6 @@ export default function Nav() {
                   About
                 </Button>
               </AnchorLink>
-              
               <AnchorLink href="#projects">
                 <Button variant="ghost" fontSize={'large'} fontWeight={400}>
                   Projects
@@ -105,7 +99,6 @@ export default function Nav() {
               </Button> */}
             </HStack>
             <ColorModeSwitcher />
-
             <Box
               display={{
                 base: 'inline-flex',
@@ -128,7 +121,6 @@ export default function Nav() {
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
               />
-
               <VStack
                 pos="absolute"
                 top={0}
@@ -139,39 +131,57 @@ export default function Nav() {
                 p={2}
                 pb={10}
                 // m={2}
-                
+
                 spacing={10}
                 rounded="sm"
                 shadow="sm"
                 bg="gray.100"
                 _dark={{ bg: 'gray.700' }}
-
               >
                 <CloseButton
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
                   size={'lg'}
                 />
-
                 <AnchorLink href="#about">
-                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
-                  About
-                </Button>
+                  <Button
+                    w="full"
+                    variant="ghost"
+                    size={'lg'}
+                    onClick={mobileNav.onClose}
+                  >
+                    About
+                  </Button>
                 </AnchorLink>
                 <AnchorLink href="#projects">
-                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
-                  Projects
-                </Button>
+                  <Button
+                    w="full"
+                    variant="ghost"
+                    size={'lg'}
+                    onClick={mobileNav.onClose}
+                  >
+                    Projects
+                  </Button>
                 </AnchorLink>
                 <AnchorLink href="#skills">
-                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
-                  Skills
-                </Button>
+                  <Button
+                    w="full"
+                    variant="ghost"
+                    size={'lg'}
+                    onClick={mobileNav.onClose}
+                  >
+                    Skills
+                  </Button>
                 </AnchorLink>
                 <AnchorLink href="#contact">
-                <Button w="full" variant="ghost" size={'lg'} onClick={mobileNav.onClose}>
-                  Contact
-                </Button>
+                  <Button
+                    w="full"
+                    variant="ghost"
+                    size={'lg'}
+                    onClick={mobileNav.onClose}
+                  >
+                    Contact
+                  </Button>
                 </AnchorLink>
                 {/* <Button w="full" variant="ghost">
                   Resume

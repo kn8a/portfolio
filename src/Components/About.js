@@ -6,30 +6,31 @@ import {
   AccordionPanel,
   AccordionButton,
   Box,
-  MinusIcon,
-  AddIcon,
-  ChakraProvider,
+//  MinusIcon,
+//  AddIcon,
+//  ChakraProvider,
   Container,
-  Center,
+//  Center,
   Heading,
   Image,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
 import React from 'react';
 import {
-  List,
+//  List,
   ListItem,
-  ListIcon,
-  OrderedList,
+//  ListIcon,
+//  OrderedList,
   UnorderedList,
 } from '@chakra-ui/react';
-import InfoSection from './InfoSection';
+//import InfoSection from './InfoSection';
 
-import Knight from '../assets/images/ChessKnight.svg';
+//import Knight from '../assets/images/ChessKnight.svg';
 import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
-import SpinKnight from './SpinKnight';
-import { ParallaxProvider } from 'react-scroll-parallax';
+//import SpinKnight from './SpinKnight';
+//import { ParallaxProvider } from 'react-scroll-parallax';
 import '@fontsource/la-belle-aurore';
 
 function About() {
@@ -44,9 +45,16 @@ function About() {
         mx="auto"
         marginTop={10}
       >
-        <Flex paddingTop={10} alignItems={'flex-start'} gap={'2rem'} border={0} direction={{ base: 'column-reverse', md: 'row' }} justifyContent={'flex-start'}>
-          <Box  border={0}>
-            <Flex >
+        <Flex
+          paddingTop={10}
+          alignItems={'flex-start'}
+          gap={'2rem'}
+          border={0}
+          direction={{ base: 'column-reverse', md: 'row' }}
+          justifyContent={'flex-start'}
+        >
+          <Box border={0}>
+            <Flex>
               <Accordion
                 defaultIndex={[2]}
                 width={'100'}
@@ -70,7 +78,6 @@ function About() {
                 >
                   About me
                 </Heading>
-
                 <AccordionItem border={0}>
                   <h2>
                     <AccordionButton
@@ -104,7 +111,6 @@ function About() {
                       I was excelling in understanding how to work with
                       electronic machines.
                     </p>
-
                     <UnorderedList>
                       <ListItem>
                         At 10, I was the "classroom computer maintainer" of the
@@ -128,7 +134,6 @@ function About() {
                     </UnorderedList>
                   </AccordionPanel>
                 </AccordionItem>
-
                 <AccordionItem border={0}>
                   <h2>
                     <AccordionButton
@@ -153,10 +158,9 @@ function About() {
                   >
                     <p>
                       Following an early start in the world of tech, my life
-                      lead me into a successfull sales career in the corporate
+                      lead me into a successful sales career in the corporate
                       world.
                     </p>
-
                     <p>
                       In 2014 I decided to change my career and enter the Real
                       Estate business. I obtained my real Estate license and
@@ -185,7 +189,6 @@ function About() {
                       _dark={{ bg: 'gray.500' }}
                       rounded={10}
                       shadow={'md'}
-                      
                     >
                       <Box flex="1" textAlign="left" fontWeight={600}>
                         Present
@@ -206,33 +209,42 @@ function About() {
                       the tech industry as a full-stack developer.
                     </p>
                     <p>
-                      I completed the Harvard Computer Science (CS50) course as
-                      a refresher on core principles of computing. Afterwards, I
-                      moved on to completing The Odin Project to become a
-                      full-stack developer using new and modern technologies,
+                      I completed the Harvard Computer Science course (
+                      <Link
+                        isExternal
+                        textDecoration={'underline'}
+                        href="https://cs50.harvard.edu/certificates/f545702b-cf13-4c81-b8e6-b971850b6015"
+                      >
+                        CS50 Certificate
+                      </Link>
+                      ) as a refresher on core principles of computing.
+                      Afterwards, I moved on to completing The Odin Project to
+                      become a full-stack developer, using new and modern
+                      technologies,
                     </p>
                     <p>
                       I got the chance to build a variety of projects starting
                       with basic JavaScript and finished with social media app
                       consisting of NodeJS Backend API and React Frontend.
                     </p>
+                    <p>
+                      Below are most of my projects from the aforementioned
+                      courses. As well as the skills I acquired in the process.
+                    </p>
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
             </Flex>
           </Box>
-          
           <Image
-            id='knightImg'
+            id="knightImg"
             src={knightimage}
             rounded={20}
             alignSelf={'center'}
             width={{ base: '50%', md: '30%' }}
             objectFit={'cover'}
             marginTop={8}
-            
           ></Image>
-          
         </Flex>
       </Container>
     </>

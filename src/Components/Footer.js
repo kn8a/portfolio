@@ -35,7 +35,6 @@ export default function Footer() {
               boxSize={'1.5rem'}
             />
           </AnchorLink>
-
           <AnchorLink href="#top" title="Kn8 Home Page">
             <Flex
               ml="2"
@@ -47,12 +46,10 @@ export default function Footer() {
               Kn8
             </Flex>
           </AnchorLink>
-
           {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
                 Kn8
               </chakra.h1> */}
         </Flex>
-
         <chakra.p
           py={{ base: '2', sm: '0' }}
           color="gray.800"
@@ -60,7 +57,6 @@ export default function Footer() {
         >
           All rights reserved
         </chakra.p>
-
         <Flex mx="-2">
           {/* <chakra.a
             href="#"

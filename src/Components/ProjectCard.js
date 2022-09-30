@@ -5,14 +5,14 @@ import {
   Icon,
   Image,
   chakra,
-  IconButton,
+//  IconButton,
   Link,
   Divider,
-  Button
+  Button,
 } from '@chakra-ui/react';
 
-import { MdEmail, MdHeadset, MdLocationOn } from 'react-icons/md';
-import { BsFillBriefcaseFill } from 'react-icons/bs';
+//import { MdEmail, MdHeadset, MdLocationOn } from 'react-icons/md';
+//import { BsFillBriefcaseFill } from 'react-icons/bs';
 import { GrStackOverflow } from 'react-icons/gr';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -62,7 +62,6 @@ export default function ProjectCard(props) {
           alt="avatar"
           shadow={'md'}
         />
-
         <Box py={4} px={6}>
           <chakra.h1
             fontSize="xl"
@@ -76,7 +75,6 @@ export default function ProjectCard(props) {
           <chakra.p py={2} color="gray.700" _dark={{ color: 'gray.400' }}>
             {project.description}
           </chakra.p>
-
           <Flex
             alignItems="center"
             mt={4}
@@ -84,7 +82,6 @@ export default function ProjectCard(props) {
             _dark={{ color: 'gray.200' }}
           >
             <Icon as={GrStackOverflow} h={6} w={6} mr={2} />
-
             <chakra.h1 px={2} fontSize="xs">
               {project.stack}
             </chakra.h1>
@@ -104,17 +101,22 @@ export default function ProjectCard(props) {
                 icon={<AiFillGithub size={'1.5rem'} />}
                 aria-label="Repository"
               ></IconButton> */}
-              <Button leftIcon={<AiFillGithub size={'1.5rem'} />} variant='solid'>
+              <Button
+                leftIcon={<AiFillGithub size={'1.5rem'} />}
+                variant="solid"
+              >
                 Source
               </Button>
-              
             </Link>
             <Link href={project.demo} isExternal title="View demo">
               {/* <IconButton
                 icon={<FaExternalLinkAlt size={'1.3rem'} />}
                 aria-label="View demo"
               ></IconButton> */}
-              <Button leftIcon={<FaExternalLinkAlt size={'1.5rem'} />} variant='solid'>
+              <Button
+                leftIcon={<FaExternalLinkAlt size={'1.5rem'} />}
+                variant="solid"
+              >
                 Demo
               </Button>
             </Link>

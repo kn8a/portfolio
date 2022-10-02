@@ -62,13 +62,13 @@ const InfoSection = () => {
           textAlign={{ base: 'left', sm: 'left' }}
           // margin="0 auto"
           width={{ base: '23rem', sm: 'auto' }}
-          fontSize={{ base: '1.7rem', md: '3rem' }}
+          fontSize={{ base: '1.6rem', md: '3rem' }}
           fontFamily={'font1'}
         >
           Hi! <div id="hand">👋</div>
           <br />I am {process.env.REACT_APP_NAME},
           <br />
-          <Flex>
+          <Flex maxWidth={'93vw'}>
             <CypherText
               textList={[
                 'a Chess player.',

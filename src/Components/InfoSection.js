@@ -26,6 +26,7 @@ import {
 
 import CypherText from 'react-cypher-text-loop';
 import WelcomeVid from './WelcomeVid';
+import ReactPlayer from 'react-player';
 
 // const iconProps = {
 //   variant: 'ghost',
@@ -46,7 +47,7 @@ const InfoSection = () => {
       flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row' }}
     >
       <VStack
-        minW={{lg:'620px'}}
+        minW={{base: '100%', lg:'620px'}}
         spacing={6}
         px={2}
         alignItems={{ base: 'flex-start', sm: 'flex-start' }}
@@ -105,12 +106,15 @@ const InfoSection = () => {
         </Flex> */}
       </VStack>
       <Flex
-        alignItems={'flex-start'}
-        justifyContent={'center'}
+        flex={1}
+        flexGrow={1}
+        alignItems={'flex-center'}
+        justifyContent={{base: 'center', lg:'flex-end'}}
         pt={{ base: '10', sm: '10', md: '10', lg: '28' }}
       >
-        <Box shadow={'md'}>
-          <WelcomeVid />
+        <Box shadow={'md'} width={{base: '90%', sm: '100%'}} maxW={'380px'} h='full'>
+        
+     <ReactPlayer controls={true} width={'100%'} height={'100%'} url="https://youtu.be/zE8vtrzFuCI"/>
         </Box>
       </Flex>
     </Container>

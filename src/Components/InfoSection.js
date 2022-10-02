@@ -46,6 +46,7 @@ const InfoSection = () => {
       flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row' }}
     >
       <VStack
+        minW={{lg:'620px'}}
         spacing={6}
         px={2}
         alignItems={{ base: 'flex-start', sm: 'flex-start' }}

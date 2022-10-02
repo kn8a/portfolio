@@ -5,9 +5,8 @@ function WelcomeVid() {
   return (
     <ReactPlayer
       controls={true}
-      width={340}
-      height={192}
-      playsinline={true}
+      width={400}
+      height={225}
       url="https://youtu.be/zE8vtrzFuCI"
     />
   );

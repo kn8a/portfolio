@@ -1,18 +1,19 @@
 import * as React from 'react';
 import {
   Container,
-//  Avatar,
+  //  Avatar,
   Heading,
   Text,
   VStack,
   Stack,
-//  Link,
-//  IconButton,
-//  Divider,
+  //  Link,
+  //  IconButton,
+  //  Divider,
   Flex,
-//  Box,
-//  Center,
-//  chakra,
+  Box,
+  //  Box,
+  //  Center,
+  //  chakra,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 // import {
@@ -23,8 +24,8 @@ import {
 //   FaTwitter,
 // } from 'react-icons/fa';
 
-
 import CypherText from 'react-cypher-text-loop';
+import WelcomeVid from './WelcomeVid';
 
 // const iconProps = {
 //   variant: 'ghost',
@@ -34,7 +35,16 @@ import CypherText from 'react-cypher-text-loop';
 
 const InfoSection = () => {
   return (
-    <Container maxW="7xl" p={{ base: 5, md: 10 }} pb={0} mb={0} id={'top'}>
+    <Container
+      maxW="7xl"
+      p={{ base: 5, md: 10 }}
+      pb={0}
+      mb={0}
+      id={'top'}
+      display="flex"
+      justifyContent={'space-between'}
+      flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row' }}
+    >
       <VStack
         spacing={6}
         px={2}
@@ -93,6 +103,15 @@ const InfoSection = () => {
           </Box>
         </Flex> */}
       </VStack>
+      <Flex
+        alignItems={'flex-start'}
+        justifyContent={'center'}
+        pt={{ base: '10', sm: '10', md: '10', lg: '28' }}
+      >
+        <Box shadow={'md'}>
+          <WelcomeVid />
+        </Box>
+      </Flex>
     </Container>
   );
 };

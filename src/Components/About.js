@@ -43,7 +43,7 @@ function About() {
         maxW="7xl"
         p={{ base: 5, md: 10 }}
         mx="auto"
-        marginTop={10}
+        marginTop={0}
       >
         <Flex
           paddingTop={10}
@@ -220,7 +220,7 @@ function About() {
                       ) as a refresher on core principles of computing.
                       Afterwards, I moved on to completing The Odin Project to
                       become a full-stack developer, using new and modern
-                      technologies,
+                      technologies.
                     </p>
                     <p>
                       I got the chance to build a variety of projects starting

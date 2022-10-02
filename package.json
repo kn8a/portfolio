@@ -23,6 +23,7 @@
     "react-cypher-text-loop": "^1.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
+    "react-player": "^2.11.0",
     "react-random-reveal": "^2.0.0",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.3.1",

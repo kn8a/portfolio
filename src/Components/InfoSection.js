@@ -61,15 +61,15 @@ const InfoSection = () => {
         <Heading
           textAlign={{ base: 'left', sm: 'left' }}
           // margin="0 auto"
-          width={{ base: '23rem', sm: 'auto' }}
+          width={{ base: '96%', sm: 'auto' }}
           fontSize={{ base: '1.6rem', md: '3rem' }}
           fontFamily={'font1'}
         >
           Hi! <div id="hand">👋</div>
           <br />I am {process.env.REACT_APP_NAME},
           <br />
-          <Flex maxWidth={'93vw'}>
-            <CypherText
+          <Box maxWidth={'96%'} border={0} className={'cypher-wrapper'}>
+            <CypherText className={'cypher'}
               textList={[
                 'a Chess player.',
                 'a Programmer.',
@@ -81,7 +81,7 @@ const InfoSection = () => {
               ]}
               delay={800}
             />
-          </Flex>
+          </Box>
         </Heading>
         <Text textAlign="left">
           Passionate about Tech. Lover of web and opensource.

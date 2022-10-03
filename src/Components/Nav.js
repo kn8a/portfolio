@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaChessKnight } from 'react-icons/fa';
-import { Icon } from '@chakra-ui/react';
+import { Icon, Image } from '@chakra-ui/react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {
@@ -19,7 +19,13 @@ import {
 
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
+import knightWhite from '../assets/images/knight-white.svg'
+import knightBlack from '../assets/images/knight-black.svg'
+
 export default function Nav() {
+
+  const logo = useColorModeValue(knightBlack,knightWhite)
+
   const bg = useColorModeValue('white', 'gray.800');
   const mobileNav = useDisclosure();
   return (
@@ -41,12 +47,18 @@ export default function Nav() {
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex alignItems="center">
             <AnchorLink href="#top" title="Kn8 Home Page">
-              <Icon
+              {/* <Icon
                 as={FaChessKnight}
                 display={'flex'}
                 alignItems="center"
                 boxSize={'1.5rem'}
+              /> */}
+              <Image
+              src={logo}
+              boxSize={'2rem'}
               />
+                
+             
             </AnchorLink>
             <AnchorLink href="#top" title="Kn8 Home Page">
               <Flex

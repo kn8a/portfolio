@@ -115,7 +115,7 @@ const InfoSection = () => {
       >
         <Box shadow={'md'} width={{base: '90%', sm: '100%'}} maxW={'400px'} h='full' className='video-wrapper'>
         
-              <ReactPlayer controls={true} width={'100%'} height={'100%'} url="https://youtu.be/zE8vtrzFuCI"/>
+              <ReactPlayer controls={true} width={'100%'} height={'100%'} light={true} url="https://youtu.be/zE8vtrzFuCI"/>
         </Box>
       </Flex>
     </Container>

@@ -1,9 +1,14 @@
 import React from 'react';
-import { chakra, Flex, Icon } from '@chakra-ui/react';
+import { chakra, Flex, Icon, useColorModeValue, Image } from '@chakra-ui/react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FaChessKnight } from 'react-icons/fa';
 
+
+import knightWhite from '../assets/images/knight-white.svg'
+import knightBlack from '../assets/images/knight-black.svg'
+
 export default function Footer() {
+  const logo = useColorModeValue(knightBlack,knightWhite)
   return (
     <Flex
       w="full"
@@ -28,12 +33,16 @@ export default function Footer() {
       >
         <Flex alignItems="center">
           <AnchorLink href="#top" title="Kn8 Home Page">
-            <Icon
+            {/* <Icon
               as={FaChessKnight}
               display={'flex'}
               alignItems="center"
               boxSize={'1.5rem'}
-            />
+            /> */}
+            <Image
+              src={logo}
+              boxSize={'2rem'}
+              />
           </AnchorLink>
           <AnchorLink href="#top" title="Kn8 Home Page">
             <Flex

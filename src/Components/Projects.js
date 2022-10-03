@@ -45,16 +45,16 @@ function Projects() {
       repo: 'https://github.com/kn8a/find-the-country',
       demo: 'https://kn8a.github.io/find-the-country/',
     },
-
     {
-      name: 'To-do',
-      description: 'Simple to-do app',
+      name: 'Rock-Paper-Scissors',
+      description: 'Classic Rock-Paper-Scissors game',
       stack: 'JavaScript, HTML, CSS',
       image:
-        'https://user-images.githubusercontent.com/88045655/192801674-fc887e90-51a6-4585-8e28-eee88f841d14.JPG',
-      repo: 'https://github.com/kn8a/todo',
-      demo: 'https://kn8a.github.io/todo-test/',
+        'https://user-images.githubusercontent.com/88045655/192947366-387b4025-6d02-4b3e-8280-adf1cb917c3c.JPG',
+      repo: 'https://github.com/kn8a/rock-paper-scissors',
+      demo: 'https://kn8a.github.io/rock-paper-scissors/',
     },
+    
     {
       name: 'CV Builder App',
       description: 'Resume design app',
@@ -110,13 +110,13 @@ function Projects() {
       demo: 'https://kn8a.github.io/sign-up-form/',
     },
     {
-      name: 'Rock-Paper-Scissors',
-      description: 'Classic Rock-Paper-Scissors game',
+      name: 'To-do',
+      description: 'Simple to-do app',
       stack: 'JavaScript, HTML, CSS',
       image:
-        'https://user-images.githubusercontent.com/88045655/192947366-387b4025-6d02-4b3e-8280-adf1cb917c3c.JPG',
-      repo: 'https://github.com/kn8a/rock-paper-scissors',
-      demo: 'https://kn8a.github.io/rock-paper-scissors/',
+        'https://user-images.githubusercontent.com/88045655/192801674-fc887e90-51a6-4585-8e28-eee88f841d14.JPG',
+      repo: 'https://github.com/kn8a/todo',
+      demo: 'https://kn8a.github.io/todo-test/',
     },
     {
       name: 'Calculator',

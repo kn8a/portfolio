@@ -8,7 +8,6 @@ import {
   Stack,
   Button,
   Heading,
-//  useColorModeValue,
   VStack,
   Flex,
   Text,
@@ -162,7 +161,7 @@ const Contact = () => {
                 <Input
                   name="email"
                   type="email"
-                  placeholder="test@test.com"
+                  placeholder="name@gmail.com"
                   rounded="md"
                   bg={'white'}
                   _dark={{ bg: 'gray.800' }}
@@ -174,7 +173,7 @@ const Contact = () => {
               <FormLabel>Purpose</FormLabel>
               <Select
                 name="purpose"
-                placeholder="Select option"
+                placeholder="Select an option"
                 bg={'white'}
                 _dark={{ bg: 'gray.800' }}
                 shadow={'inner'}

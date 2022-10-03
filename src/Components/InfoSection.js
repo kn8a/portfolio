@@ -1,19 +1,12 @@
 import * as React from 'react';
 import {
   Container,
-  //  Avatar,
   Heading,
   Text,
   VStack,
   Stack,
-  //  Link,
-  //  IconButton,
-  //  Divider,
   Flex,
   Box,
-  //  Box,
-  //  Center,
-  //  chakra,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 // import {
@@ -25,7 +18,6 @@ import {
 // } from 'react-icons/fa';
 
 import CypherText from 'react-cypher-text-loop';
-import WelcomeVid from './WelcomeVid';
 import ReactPlayer from 'react-player';
 
 // const iconProps = {
@@ -47,8 +39,8 @@ const InfoSection = () => {
       flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row' }}
     >
       <VStack
-        minW={{base: '100%', lg:'600px'}}
-        spacing={{base: 6, lg: 10}}
+        minW={{ base: '100%', lg: '600px' }}
+        spacing={{ base: 6, lg: 10 }}
         px={2}
         alignItems={{ base: 'flex-start', sm: 'flex-start' }}
         mb={0}
@@ -60,28 +52,25 @@ const InfoSection = () => {
         </Stack>
         <Heading
           textAlign={{ base: 'left', sm: 'left' }}
-          // margin="0 auto"
-          // width={{ base: 'auto', sm: 'auto' }}
           fontSize={{ base: '1.5rem', md: '2.5rem' }}
           fontFamily={'font1'}
         >
           Hi! <div id="hand">👋</div>
           <br />I am {process.env.REACT_APP_NAME},
           <br />
-          {/* <Box maxWidth={'96%'} border={0} className={'cypher-wrapper'}> */}
-            <CypherText className={'cypher'}
-              textList={[
-                'a Chess player.',
-                'a Programmer.',
-                'a Full-stack Developer.',
-                'a Tennis Player.',
-                'a learner.',
-                'a creator.',
-                'a traveler.',
-              ]}
-              delay={800}
-            />
-          {/* </Box> */}
+          <CypherText
+            className={'cypher'}
+            textList={[
+              'a Chess player.',
+              'a Programmer.',
+              'a Full-Stack Developer.',
+              'a Tennis Player.',
+              'a learner.',
+              'a creator.',
+              'a traveler.',
+            ]}
+            delay={800}
+          />
         </Heading>
         <Text textAlign="left">
           Passionate about Tech. Lover of web and opensource.
@@ -108,14 +97,23 @@ const InfoSection = () => {
       <Flex
         width={'100%'}
         flex={1}
-        // maxH={'380px'}
         alignItems={'center'}
-        justifyContent={{base: 'center', lg:'center'}}
+        justifyContent={{ base: 'center', lg: 'center' }}
         pt={{ base: '10', sm: '10', md: '10', lg: '24' }}
       >
-        <Box shadow={'md'} width={{base: '90%', sm: '100%'}} maxW={'400px'} h='full' className='video-wrapper'>
-        
-              <ReactPlayer controls={true} width={'100%'} height={'100%'} url="https://youtu.be/zE8vtrzFuCI"/>
+        <Box
+          shadow={'md'}
+          width={{ base: '90%', sm: '100%' }}
+          maxW={'400px'}
+          h="full"
+          className="video-wrapper"
+        >
+          <ReactPlayer
+            controls={true}
+            width={'100%'}
+            height={'100%'}
+            url="https://youtu.be/zE8vtrzFuCI"
+          />
         </Box>
       </Flex>
     </Container>
@@ -130,25 +128,25 @@ const accounts = [
   //   icon: <FaGithub />,
   // },
   // {
-  //   url: 'https://twitter.com/muhammad_ahmaad',
+  //   url: 'https://twitter.com',
   //   label: 'Twitter Account',
   //   type: 'twitter',
   //   icon: <FaTwitter />,
   // },
   // {
-  //   url: 'https://dev.to/m_ahmad',
+  //   url: 'https://dev.to',
   //   label: 'Dev Account',
   //   type: 'gray',
   //   icon: <FaDev />,
   // },
   // {
-  //   url: 'https://linkedin.com/in/muhammad-ahmad20',
+  //   url: 'https://linkedin.com',
   //   label: 'LinkedIn Account',
   //   type: 'linkedin',
   //   icon: <FaLinkedin />,
   // },
   // {
-  //   url: 'https://www.quora.com/profile/Muhammad-Ahmad-66',
+  //   url: 'https://www.quora.com',
   //   label: 'Quora Account',
   //   type: 'red',
   //   icon: <FaQuora />,

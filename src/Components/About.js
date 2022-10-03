@@ -6,31 +6,17 @@ import {
   AccordionPanel,
   AccordionButton,
   Box,
-//  MinusIcon,
-//  AddIcon,
-//  ChakraProvider,
+  ListItem,
+  UnorderedList,
   Container,
-//  Center,
   Heading,
   Image,
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
 import React from 'react';
-import {
-//  List,
-  ListItem,
-//  ListIcon,
-//  OrderedList,
-  UnorderedList,
-} from '@chakra-ui/react';
-//import InfoSection from './InfoSection';
-
-//import Knight from '../assets/images/ChessKnight.svg';
 import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
-//import SpinKnight from './SpinKnight';
-//import { ParallaxProvider } from 'react-scroll-parallax';
 import '@fontsource/la-belle-aurore';
 
 function About() {
@@ -224,11 +210,11 @@ function About() {
                     </p>
                     <p>
                       I got the chance to build a variety of projects starting
-                      with basic JavaScript and finished with social media app
+                      with basic JavaScript and finishing with social media app
                       consisting of NodeJS Backend API and React Frontend.
                     </p>
                     <p>
-                      Below are most of my projects from the aforementioned
+                      Below are some of my projects from the aforementioned
                       courses. As well as the skills I acquired in the process.
                     </p>
                   </AccordionPanel>

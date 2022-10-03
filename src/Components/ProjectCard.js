@@ -5,14 +5,11 @@ import {
   Icon,
   Image,
   chakra,
-//  IconButton,
   Link,
   Divider,
   Button,
 } from '@chakra-ui/react';
 
-//import { MdEmail, MdHeadset, MdLocationOn } from 'react-icons/md';
-//import { BsFillBriefcaseFill } from 'react-icons/bs';
 import { GrStackOverflow } from 'react-icons/gr';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -32,14 +29,7 @@ export default function ProjectCard(props) {
   }, []);
 
   return (
-    <Flex
-      //bg="#edf3f8"
-      //_dark={{ bg: "#3e3e3e" }}
-      p={5}
-      w="full"
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex p={5} w="full" alignItems="center" justifyContent="center">
       <Box
         p={2}
         w="sm"
@@ -96,11 +86,6 @@ export default function ProjectCard(props) {
             _dark={{ color: 'gray.200' }}
           >
             <Link href={project.repo} isExternal title="Repository">
-              {/* <IconButton
-                colorScheme="gray"
-                icon={<AiFillGithub size={'1.5rem'} />}
-                aria-label="Repository"
-              ></IconButton> */}
               <Button
                 leftIcon={<AiFillGithub size={'1.5rem'} />}
                 variant="solid"
@@ -109,10 +94,6 @@ export default function ProjectCard(props) {
               </Button>
             </Link>
             <Link href={project.demo} isExternal title="View demo">
-              {/* <IconButton
-                icon={<FaExternalLinkAlt size={'1.3rem'} />}
-                aria-label="View demo"
-              ></IconButton> */}
               <Button
                 leftIcon={<FaExternalLinkAlt size={'1.5rem'} />}
                 variant="solid"

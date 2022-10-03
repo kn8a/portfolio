@@ -1,7 +1,7 @@
 {
   "name": "portfoli",
   "version": "0.1.0",
-  "homepage": "https://kn8a.github.io/portfolio/",
+  "homepage": "https://www.kn8dev.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.3.4",

@@ -54,7 +54,7 @@ function Projects() {
       repo: 'https://github.com/kn8a/rock-paper-scissors',
       demo: 'https://kn8a.github.io/rock-paper-scissors/',
     },
-    
+
     {
       name: 'CV Builder App',
       description: 'Resume design app',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FaChessKnight } from 'react-icons/fa';
-import { Icon, Image } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import {
@@ -19,12 +18,11 @@ import {
 
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
-import knightWhite from '../assets/images/knight-white.svg'
-import knightBlack from '../assets/images/knight-black.svg'
+import knightWhite from '../assets/images/knight-white.svg';
+import knightBlack from '../assets/images/knight-black.svg';
 
 export default function Nav() {
-
-  const logo = useColorModeValue(knightBlack,knightWhite)
+  const logo = useColorModeValue(knightBlack, knightWhite);
 
   const bg = useColorModeValue('white', 'gray.800');
   const mobileNav = useDisclosure();
@@ -47,18 +45,7 @@ export default function Nav() {
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex alignItems="center">
             <AnchorLink href="#top" title="Kn8 Home Page">
-              {/* <Icon
-                as={FaChessKnight}
-                display={'flex'}
-                alignItems="center"
-                boxSize={'1.5rem'}
-              /> */}
-              <Image
-              src={logo}
-              boxSize={'2rem'}
-              />
-                
-             
+              <Image src={logo} boxSize={'2rem'} />
             </AnchorLink>
             <AnchorLink href="#top" title="Kn8 Home Page">
               <Flex
@@ -72,9 +59,6 @@ export default function Nav() {
                 Kn8
               </Flex>
             </AnchorLink>
-            {/* <chakra.h1 fontSize="xl" fontWeight="600" ml="2">
-              Kn8
-            </chakra.h1> */}
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -106,9 +90,6 @@ export default function Nav() {
                   Contact
                 </Button>
               </AnchorLink>
-              {/* <Button variant="ghost" fontSize={'large'} fontWeight={400}>
-                Resume
-              </Button> */}
             </HStack>
             <ColorModeSwitcher />
             <Box
@@ -142,8 +123,6 @@ export default function Nav() {
                 flexDirection="column"
                 p={2}
                 pb={10}
-                // m={2}
-
                 spacing={10}
                 rounded="sm"
                 shadow="sm"
@@ -195,9 +174,6 @@ export default function Nav() {
                     Contact
                   </Button>
                 </AnchorLink>
-                {/* <Button w="full" variant="ghost">
-                  Resume
-                </Button> */}
               </VStack>
             </Box>
           </HStack>

@@ -62,7 +62,7 @@ const InfoSection = () => {
           textAlign={{ base: 'left', sm: 'left' }}
           // margin="0 auto"
           // width={{ base: 'auto', sm: 'auto' }}
-          fontSize={{ base: '1.6rem', md: '2.5rem' }}
+          fontSize={{ base: '1.5rem', md: '2.5rem' }}
           fontFamily={'font1'}
         >
           Hi! <div id="hand">👋</div>

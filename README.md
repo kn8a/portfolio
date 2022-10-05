@@ -2,8 +2,7 @@
 A personal portfolio website built with React and ChakraUi
 Live demo: [http://kn8dev.com](http://kn8dev.com)
 
-![portfolio](https://user-images.githubusercontent.com/88045655/193979443-228c2341-1b3d-41e2-a81a-1f882ac79677.gif)
-
+<img src=https://user-images.githubusercontent.com/88045655/193983905-10b58117-9263-4cd0-8263-7d7886a0239c.JPG alt="Portfolio screenshot" width="600">
 
 ## Features:
 

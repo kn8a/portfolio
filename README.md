@@ -10,6 +10,7 @@ Live demo: [http://kn8dev.com](http://kn8dev.com)
 - Fully responsive
 - Single-page site
 - Contact form using EmailJS - not requiring a backend
+- Youtube welcome video
 - Animated background
 - Projects populated from array within the `Projects.js` component
 - Skills populated from array within the `Skills.js` component

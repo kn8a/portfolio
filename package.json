@@ -1,5 +1,5 @@
 {
-  "name": "portfoli",
+  "name": "portfolio",
   "version": "0.1.0",
   "homepage": "https://www.kn8dev.com",
   "private": true,
@@ -26,7 +26,6 @@
     "react-player": "^2.11.0",
     "react-random-reveal": "^2.0.0",
     "react-scripts": "5.0.1",
-    "react-scroll-parallax": "^3.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

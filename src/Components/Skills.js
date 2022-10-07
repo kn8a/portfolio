@@ -80,6 +80,10 @@ function Skills() {
       name: 'Linux',
       img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
     },
+    {
+      name: 'Heroku',
+      img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg',
+    },
   ];
 
   return (

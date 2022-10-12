@@ -191,7 +191,7 @@ function About() {
                     gap={'1rem'}
                   >
                     <p>
-                      In 2021 I decided to follow my passion and get back into
+                      In 2020 I decided to follow my passion and get back into
                       the tech industry as a full-stack developer.
                     </p>
                     <p>

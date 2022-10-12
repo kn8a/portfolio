@@ -7,6 +7,7 @@ import {
   Stack,
   Flex,
   Box,
+  Spinner
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 // import {
@@ -109,6 +110,7 @@ const InfoSection = () => {
           className="video-wrapper"
         >
           <ReactPlayer
+            fallback={<Spinner color='red.500'/>}
             controls={true}
             width={'100%'}
             height={'100%'}

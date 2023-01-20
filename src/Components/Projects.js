@@ -15,9 +15,18 @@ import { useDisclosure } from '@chakra-ui/react';
 function Projects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const drawerBreakpoint = 5;
+  const drawerBreakpoint = 8;
 
   const projects = [
+    {
+      name: 'KortGo',
+      description: 'Sports venue booking system',
+      stack: 'NodeJS, MongoDb, React',
+      image:
+        'https://user-images.githubusercontent.com/88045655/213618719-c7de00c0-a14b-488f-b3c1-6be4c6b4566b.png',
+      repo: 'https://github.com/kn8a/kortgo',
+      demo: 'https://kn8a.github.io/kortgo/',
+    },
     {
       name: 'Sweetnook',
       description: 'Social media app inspired by Facebook',
@@ -26,6 +35,15 @@ function Projects() {
         'https://user-images.githubusercontent.com/88045655/189862036-d063460a-ced4-4c91-8dba-299cc9a17a82.gif',
       repo: 'https://github.com/kn8a/sweetnook',
       demo: 'https://kn8a.github.io/sweetnook/',
+    },
+    {
+      name: 'Phonebook',
+      description: 'Phonebook with CRUD functionality',
+      stack: 'NodeJS, MongoDb, React',
+      image:
+        'https://user-images.githubusercontent.com/88045655/213617525-45bd9177-aee8-4c3b-851d-d16ef6f5fce7.JPG',
+      repo: 'https://github.com/kn8a/phonebook-react',
+      demo: 'https://kn8a.github.io/phonebook-react/',
     },
     {
       name: 'Shopping Cart',
@@ -65,23 +83,24 @@ function Projects() {
       demo: 'https://kn8a.github.io/cv-project/',
     },
     {
-      name: 'Goals',
-      description: 'Simple app for goal setting',
-      stack: 'NodeJS, MongoDb, React',
+      name: 'Weather app',
+      description: 'Fetching weather data from API',
+      stack: 'JavaScript, HTML, CSS',
       image:
-        'https://user-images.githubusercontent.com/88045655/192803899-10f0996a-6b93-42af-8c13-8caa735e371f.JPG',
-      repo: 'https://github.com/kn8a/goals',
-      demo: 'https://kn8a-goals.herokuapp.com/',
+        'https://user-images.githubusercontent.com/88045655/192946136-043ee1d3-2043-4c51-bb95-4275999ada1c.JPG',
+      repo: 'https://github.com/kn8a/weather-app',
+      demo: 'https://kn8a.github.io/weather-app/',
     },
     {
-      name: 'Admin dashboard',
-      description: 'Mockup dashboard (CSS Grid practice)',
-      stack: 'HTML, CSS (Grid)',
+      name: 'Calculator',
+      description: 'A JavaScript calculator',
+      stack: 'JavaScript, HTML, CSS',
       image:
-        'https://user-images.githubusercontent.com/88045655/192804753-bdb98acf-6cc5-4ff8-886e-1abf7e668fdd.JPG',
-      repo: 'https://github.com/kn8a/admin-dashboard',
-      demo: 'https://kn8a.github.io/admin-dashboard/',
+        'https://user-images.githubusercontent.com/88045655/192948904-1064a4d3-8302-4661-a819-f44736a600f4.JPG',
+      repo: 'https://github.com/kn8a/odin-calculator',
+      demo: 'https://kn8a.github.io/odin-calculator/',
     },
+    
     {
       name: 'Library app',
       description: 'Book tracking app',
@@ -119,14 +138,15 @@ function Projects() {
       demo: 'https://kn8a.github.io/todo-test/',
     },
     {
-      name: 'Calculator',
-      description: 'A JavaScript calculator',
-      stack: 'JavaScript, HTML, CSS',
+      name: 'Goals',
+      description: 'Simple app for goal setting',
+      stack: 'NodeJS, MongoDb, React',
       image:
-        'https://user-images.githubusercontent.com/88045655/192948904-1064a4d3-8302-4661-a819-f44736a600f4.JPG',
-      repo: 'https://github.com/kn8a/odin-calculator',
-      demo: 'https://kn8a.github.io/odin-calculator/',
+        'https://user-images.githubusercontent.com/88045655/192803899-10f0996a-6b93-42af-8c13-8caa735e371f.JPG',
+      repo: 'https://github.com/kn8a/goals',
+      demo: 'https://kn8a-goals.herokuapp.com/',
     },
+    
     {
       name: 'Tic-Tac-Toe',
       description: 'Minimal Tic-Tac-Toe game',
@@ -135,6 +155,15 @@ function Projects() {
         'https://user-images.githubusercontent.com/88045655/192949539-aaeef423-3a59-43eb-829f-ef98ed79dbe5.JPG',
       repo: 'https://github.com/kn8a/tic-tac-toe',
       demo: 'https://kn8a.github.io/tic-tac-toe/',
+    },
+    {
+      name: 'Admin dashboard',
+      description: 'Mockup dashboard (CSS Grid practice)',
+      stack: 'HTML, CSS (Grid)',
+      image:
+        'https://user-images.githubusercontent.com/88045655/192804753-bdb98acf-6cc5-4ff8-886e-1abf7e668fdd.JPG',
+      repo: 'https://github.com/kn8a/admin-dashboard',
+      demo: 'https://kn8a.github.io/admin-dashboard/',
     },
     {
       name: 'Restaurant app',

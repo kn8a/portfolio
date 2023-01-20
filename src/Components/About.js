@@ -13,11 +13,13 @@ import {
   Image,
   useColorModeValue,
   Link,
+  Text,
 } from '@chakra-ui/react';
 import React from 'react';
 import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
 import '@fontsource/la-belle-aurore';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function About() {
   const knightimage = useColorModeValue(Knightlight, Knightdark);
@@ -191,8 +193,7 @@ function About() {
                     gap={'1rem'}
                   >
                     <p>
-                      In 2020 I decided to follow my passion and get back into
-                      the tech industry as a full-stack developer.
+                    In 2020 I decided to expand my skills and knowledge to become a full-stack developer.
                     </p>
                     <p>
                       I completed the Harvard Computer Science course (
@@ -203,19 +204,19 @@ function About() {
                       >
                         CS50 Certificate
                       </Link>
-                      ) as a refresher on core principles of computing.
-                      Afterwards, I moved on to completing The Odin Project to
-                      become a full-stack developer, using new and modern
+                      ) as a refresher on the core principles of computing.
+                      Afterward, I moved on to completing The Odin Project and
+                      obtained the skills necessary to build backend and frontend web apps, using newer and modern
                       technologies.
                     </p>
                     <p>
-                      I got the chance to build a variety of projects starting
-                      with basic JavaScript and finishing with social media app
-                      consisting of NodeJS Backend API and React Frontend.
+                      During these courses, I built a variety of projects starting 
+                      with algorithms and file manipulation using C and Python, and finishing with a social media app
+                      using NodeJS Backend API and React Frontend.
                     </p>
                     <p>
-                      Below are some of my projects from the aforementioned
-                      courses. As well as the skills I acquired in the process.
+                      Below are some of my <AnchorLink className='about-link' href='#projects'>projects</AnchorLink> from the aforementioned
+                      courses, as well as the <AnchorLink className='about-link' href='#skills'>skills</AnchorLink> I acquired in the process.
                     </p>
                   </AccordionPanel>
                 </AccordionItem>

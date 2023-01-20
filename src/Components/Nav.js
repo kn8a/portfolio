@@ -13,6 +13,7 @@ import {
   useDisclosure,
   VStack,
   IconButton,
+  Link,
   CloseButton,
 } from '@chakra-ui/react';
 
@@ -90,6 +91,12 @@ export default function Nav() {
                   Contact
                 </Button>
               </AnchorLink>
+              <Link href='https://kn8.hashnode.dev' isExternal>
+              <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+                  Blog
+              </Button>
+              </Link>
+              
             </HStack>
             <ColorModeSwitcher />
             <Box
@@ -174,6 +181,17 @@ export default function Nav() {
                     Contact
                   </Button>
                 </AnchorLink>
+                <Link href='https://kn8.hashnode.dev' isExternal>
+                <Button
+                    w="full"
+                    variant="ghost"
+                    size={'lg'}
+                    onClick={mobileNav.onClose}
+                  >
+                    Blog
+                  </Button>
+              </Link>
+                
               </VStack>
             </Box>
           </HStack>

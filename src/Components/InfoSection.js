@@ -7,25 +7,31 @@ import {
   Stack,
   Flex,
   Box,
-  Spinner
+  Spinner,
+  IconButton,
+  Divider,
+  Link,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-// import {
-//   FaGithub,
-//   FaDev,
-//   FaLinkedin,
-//   FaQuora,
-//   FaTwitter,
-// } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaDev,
+  FaLinkedin,
+  FaQuora,
+  FaTwitter,
+  FaBlog,
+  FaMicroblog,
+} from 'react-icons/fa';
 
 import CypherText from 'react-cypher-text-loop';
 import ReactPlayer from 'react-player';
+import { GrBlog } from 'react-icons/gr';
+import { SiHashnode } from 'react-icons/si';
 
-// const iconProps = {
-//   variant: 'ghost',
-//   size: 'lg',
-//   isRound: true,
-// };
+const iconProps = {
+  variant: 'solid',
+  size: 'lg',
+  isRound: true,
+};
 
 const InfoSection = () => {
   return (
@@ -73,12 +79,15 @@ const InfoSection = () => {
             delay={800}
           />
         </Heading>
-        <Text textAlign="left">
-          Passionate about Tech. Lover of web and opensource.
+        <Text textAlign="left" maxWidth={'container.sm'}>
+          Passionate about Tech. Lover of web and opensource. <br />
+          <br />
+          Explore the projects and skills that make me a versatile and
+          passionate developer ready to tackle new challenges.
         </Text>
-        {/* <Divider /> */}
-        {/* <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
-          <Box textAlign="center" mb={0} pb={0}>
+        <Divider />
+        <Flex alignItems="center" justify="center" w="100%" mb={0} pb={0}>
+          <Box textAlign="center" mb={0} pb={0} display="flex" gap={6}>
             {accounts.map((sc, index) => (
               <IconButton
                 key={index}
@@ -86,6 +95,7 @@ const InfoSection = () => {
                 isExternal
                 href={sc.url}
                 aria-label={sc.label}
+                title={sc.label}
                 colorScheme={sc.type}
                 rounded="full"
                 icon={sc.icon}
@@ -93,24 +103,27 @@ const InfoSection = () => {
               />
             ))}
           </Box>
-        </Flex> */}
+        </Flex>
       </VStack>
       <Flex
         width={'100%'}
         flex={1}
         alignItems={'center'}
         justifyContent={{ base: 'center', lg: 'center' }}
-        pt={{ base: '10', sm: '10', md: '10', lg: '24' }}
+        pt={{ base: '10', sm: '10', md: '10', lg: '10' }}
+        // border={'2px '}
       >
         <Box
           shadow={'md'}
           width={{ base: '90%', sm: '100%' }}
           maxW={'400px'}
-          h="full"
+          h={'230px'}
           className="video-wrapper"
+          display={'flex'}
+          alignItems="center"
         >
           <ReactPlayer
-            fallback={<Spinner color='red.500'/>}
+            fallback={<Spinner color="red.500" />}
             controls={true}
             width={'100%'}
             height={'100%'}
@@ -123,36 +136,25 @@ const InfoSection = () => {
 };
 
 const accounts = [
-  // {
-  //   url: 'https://github.com/kn8a',
-  //   label: 'Github Account',
-  //   type: 'gray',
-  //   icon: <FaGithub />,
-  // },
-  // {
-  //   url: 'https://twitter.com',
-  //   label: 'Twitter Account',
-  //   type: 'twitter',
-  //   icon: <FaTwitter />,
-  // },
-  // {
-  //   url: 'https://dev.to',
-  //   label: 'Dev Account',
-  //   type: 'gray',
-  //   icon: <FaDev />,
-  // },
-  // {
-  //   url: 'https://linkedin.com',
-  //   label: 'LinkedIn Account',
-  //   type: 'linkedin',
-  //   icon: <FaLinkedin />,
-  // },
-  // {
-  //   url: 'https://www.quora.com',
-  //   label: 'Quora Account',
-  //   type: 'red',
-  //   icon: <FaQuora />,
-  // },
+  {
+    url: 'https://github.com/kn8a',
+    label: 'Github Profile',
+    type: 'gray',
+    icon: <FaGithub />,
+  },
+  {
+    url: 'https://kn8.hashnode.dev/',
+    label: 'Blog',
+    type: 'gray',
+    icon: <FaBlog />,
+  },
+
+  {
+    url: 'https://www.linkedin.com/in/kn8dev/',
+    label: 'LinkedIn Profile',
+    type: 'gray',
+    icon: <FaLinkedin />,
+  },
 ];
 
 export default InfoSection;

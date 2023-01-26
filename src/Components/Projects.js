@@ -66,7 +66,7 @@ function Projects() {
     {
       name: 'Rock-Paper-Scissors',
       description: 'Classic Rock-Paper-Scissors game',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192947366-387b4025-6d02-4b3e-8280-adf1cb917c3c.JPG',
       repo: 'https://github.com/kn8a/rock-paper-scissors',
@@ -85,7 +85,7 @@ function Projects() {
     {
       name: 'Weather app',
       description: 'Fetching weather data from API',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192946136-043ee1d3-2043-4c51-bb95-4275999ada1c.JPG',
       repo: 'https://github.com/kn8a/weather-app',
@@ -94,31 +94,23 @@ function Projects() {
     {
       name: 'Calculator',
       description: 'A JavaScript calculator',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192948904-1064a4d3-8302-4661-a819-f44736a600f4.JPG',
       repo: 'https://github.com/kn8a/odin-calculator',
       demo: 'https://kn8a.github.io/odin-calculator/',
     },
-    
+
     {
       name: 'Library app',
       description: 'Book tracking app',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192807418-24af2046-528b-475c-9349-6cbc2c8de34f.JPG',
       repo: 'https://github.com/kn8a/library',
       demo: 'https://kn8a.github.io/library/',
     },
-    {
-      name: 'Weather app',
-      description: 'Fetching weather data from API',
-      stack: 'JavaScript, HTML, CSS',
-      image:
-        'https://user-images.githubusercontent.com/88045655/192946136-043ee1d3-2043-4c51-bb95-4275999ada1c.JPG',
-      repo: 'https://github.com/kn8a/weather-app',
-      demo: 'https://kn8a.github.io/weather-app/',
-    },
+
     {
       name: 'Sign-up form',
       description: 'A mockup sign-up form using Flex.',
@@ -131,7 +123,7 @@ function Projects() {
     {
       name: 'To-do',
       description: 'Simple to-do app',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192801674-fc887e90-51a6-4585-8e28-eee88f841d14.JPG',
       repo: 'https://github.com/kn8a/todo',
@@ -146,11 +138,11 @@ function Projects() {
       repo: 'https://github.com/kn8a/goals',
       demo: 'https://kn8a-goals.herokuapp.com/',
     },
-    
+
     {
       name: 'Tic-Tac-Toe',
       description: 'Minimal Tic-Tac-Toe game',
-      stack: 'JavaScript, HTML, CSS',
+      stack: 'Vanilla JS, HTML, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/192949539-aaeef423-3a59-43eb-829f-ef98ed79dbe5.JPG',
       repo: 'https://github.com/kn8a/tic-tac-toe',
@@ -168,7 +160,7 @@ function Projects() {
     {
       name: 'Restaurant app',
       description: 'Restaurant site built entirely in JavaScript, CSS',
-      stack: 'JavaScript, CSS',
+      stack: 'Vanilla JS, CSS',
       image:
         'https://user-images.githubusercontent.com/88045655/155962189-808e06ee-be1f-4e00-bdd1-b49574f28c80.JPG',
       repo: 'https://github.com/kn8a/restaurant',

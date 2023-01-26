@@ -91,12 +91,11 @@ export default function Nav() {
                   Contact
                 </Button>
               </AnchorLink>
-              <Link href='https://kn8.hashnode.dev' isExternal>
-              <Button variant="ghost" fontSize={'large'} fontWeight={400}>
+              <Link href="https://kn8.hashnode.dev" isExternal>
+                <Button variant="ghost" fontSize={'large'} fontWeight={400}>
                   Blog
-              </Button>
+                </Button>
               </Link>
-              
             </HStack>
             <ColorModeSwitcher />
             <Box
@@ -181,8 +180,8 @@ export default function Nav() {
                     Contact
                   </Button>
                 </AnchorLink>
-                <Link href='https://kn8.hashnode.dev' isExternal>
-                <Button
+                <Link href="https://kn8.hashnode.dev" isExternal>
+                  <Button
                     w="full"
                     variant="ghost"
                     size={'lg'}
@@ -190,8 +189,7 @@ export default function Nav() {
                   >
                     Blog
                   </Button>
-              </Link>
-                
+                </Link>
               </VStack>
             </Box>
           </HStack>

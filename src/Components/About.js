@@ -20,6 +20,7 @@ import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Animated } from 'react-animated-css';
 
 function About() {
   const knightimage = useColorModeValue(Knightlight, Knightdark);
@@ -45,7 +46,7 @@ function About() {
             <Flex>
               <Accordion
                 defaultIndex={[2]}
-                width={'100'}
+                maxWidth="container.lg"
                 boxShadow={'sm'}
                 m={4}
                 gap={4}
@@ -94,30 +95,32 @@ function About() {
                     gap={'1rem'}
                   >
                     <p>
-                      I have always been passionate about working and tinkering
-                      with computers, electronics and software. Since young age,
-                      I was excelling in understanding how to work with
-                      electronic machines.
+                      I have always had a strong interest in working with
+                      computers, electronics, and software. From a young age, I
+                      demonstrated a natural aptitude for understanding and
+                      working with electronic machines.
                     </p>
                     <UnorderedList>
                       <ListItem>
-                        At 10, I was the "classroom computer maintainer" of the
-                        486 machine we had in class. I also learned to solder
-                        boards, and functions of different electronic
-                        components.
+                        At the age of 10, I was appointed as the "classroom
+                        computer maintainer" for the 486 machine in my class. I
+                        also taught myself how to solder boards and familiarized
+                        myself with the functions of various electronic
+                        components. components.
                       </ListItem>
                       <ListItem>
-                        at 13, installed my first Linux distro - RedHat.
+                        At 13, I installed my first Linux distribution, RedHat.
                       </ListItem>
                       <ListItem>
-                        at 14, learned Pascal, Visual Basic and HTML.
+                        At 14, I learned Pascal, Visual Basic and HTML.
                       </ListItem>
                       <ListItem>
-                        at 15, learned Web design using Dreamweaver and Flash.
+                        At 15, I gained skills in web design using Dreamweaver
+                        and Flash.
                       </ListItem>
-                      <ListItem>at 16, learned Basic.</ListItem>
+                      <ListItem>At 16, I learned Basic.</ListItem>
                       <ListItem>
-                        at 18, started a computer repair business.
+                        Finally, at 18, I started a computer repair business.
                       </ListItem>
                     </UnorderedList>
                   </AccordionPanel>
@@ -145,28 +148,29 @@ function About() {
                     gap={'1rem'}
                   >
                     <p>
-                      Following an early start in the world of tech, my life
-                      lead me into a successful sales career in the corporate
+                      Following an early start in the world of tech, I
+                      transitioned to a successful sales role in the corporate
                       world.
                     </p>
                     <p>
-                      In 2014 I decided to change my career and enter the Real
-                      Estate business. I obtained my real Estate license and
-                      joined a small brokerage. Immediately, my tech background
-                      kicked into 5th gear and in no-time, I was building my
-                      website and helping other Realtors with theirs.
+                      In 2014, I decided to pivot and pursue a career in Real
+                      Estate. I obtained my license and joined a small
+                      brokerage. My background in technology quickly came in
+                      handy as I began building my own website and assisting
+                      other Realtors with theirs.
                     </p>
                     <p>
-                      Once my skills were noticed I was incorporated into every
-                      aspect of the company's projects in the realm of web
-                      presence and emerging technologies in the industry.
+                      As my skills were recognized, I was increasingly involved
+                      in the company's projects related to web presence and
+                      emerging technologies in the industry.
                     </p>
                     <p>
-                      I ended up designing, building and maintaining the
-                      company's main website including a forum, agent dashboard,
-                      property search, etc... In addition, I worked on building
-                      a CRM, lead distribution tool, record keeping software and
-                      countless small design projects.
+                      I took on the responsibility of designing, building, and
+                      maintaining the company's main website, which included
+                      features such as a forum, agent dashboard, and property
+                      search. Additionally, I worked on developing a CRM, lead
+                      distribution tool, and record-keeping software, as well as
+                      various smaller design projects.
                     </p>
                   </AccordionPanel>
                 </AccordionItem>
@@ -193,10 +197,12 @@ function About() {
                     gap={'1rem'}
                   >
                     <p>
-                    In 2020 I decided to expand my skills and knowledge to become a full-stack developer.
+                      In 2020, I set out to broaden my expertise and become a
+                      full-stack developer.
                     </p>
                     <p>
-                      I completed the Harvard Computer Science course (
+                      To achieve this goal, I took the Harvard Computer Science
+                      course (
                       <Link
                         isExternal
                         textDecoration={'underline'}
@@ -204,34 +210,37 @@ function About() {
                       >
                         CS50 Certificate
                       </Link>
-                      ) as a refresher on the core principles of computing.
-                      Afterward, I moved on to completing The Odin Project and
-                      obtained the skills necessary to build backend and frontend web apps, using newer and modern
-                      technologies.
+                      ) as a foundation, and then moved on to The Odin Project
+                      to gain the skills needed to develop backend and frontend
+                      web apps using current technologies.
+                    </p>
+
+                    <p>
+                      Through these courses, I built a range of projects,
+                      starting with algorithms and file manipulation using C and
+                      Python, and finally, I developed a social media app
+                      utilizing NodeJS Backend API and React Frontend.
                     </p>
                     <p>
-                      During these courses, I built a variety of projects starting 
-                      with algorithms and file manipulation using C and Python, and finishing with a social media app
-                      using NodeJS Backend API and React Frontend.
-                    </p>
-                    <p>
-                      Below are some of my <AnchorLink className='about-link' href='#projects'>projects</AnchorLink> from the aforementioned
-                      courses, as well as the <AnchorLink className='about-link' href='#skills'>skills</AnchorLink> I acquired in the process.
+                      Some examples of my{' '}
+                      <AnchorLink className="about-link" href="#projects">
+                        projects
+                      </AnchorLink>{' '}
+                      and the{' '}
+                      <AnchorLink className="about-link" href="#skills">
+                        skills
+                      </AnchorLink>{' '}
+                      I acquired during this process are listed below.
                     </p>
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
             </Flex>
           </Box>
-          <Image
-            id="knightImg"
-            src={knightimage}
-            rounded={20}
-            alignSelf={'center'}
-            width={{ base: '50%', md: '30%' }}
-            objectFit={'cover'}
-            marginTop={8}
-          ></Image>
+
+          <Box width={{ base: '50%', md: '30%' }} alignSelf={'center'}>
+            <Image id="knightImg" src={knightimage} objectFit={'cover'}></Image>
+          </Box>
         </Flex>
       </Container>
     </>

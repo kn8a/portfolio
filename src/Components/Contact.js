@@ -178,6 +178,7 @@ const Contact = () => {
                 _dark={{ bg: 'gray.800' }}
                 shadow={'inner'}
                 required
+                color={'gray'}
               >
                 <option value="hire">Hire for full/part time</option>
                 <option value="freelance">Freelance work</option>

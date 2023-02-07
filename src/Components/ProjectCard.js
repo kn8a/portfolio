@@ -33,9 +33,10 @@ export default function ProjectCard(props) {
       <div className="project-card-border">
         <Box
           p={2}
-          w="sm"
+          w='350px'
           mx="auto"
-          bg="gray.50"
+          bgGradient='linear(gray.300 0%,, gray.50 50%, gray.50 75%, gray.50 100%)'
+          // bg={'gray.50'}
           _dark={{ bg: 'gray.900' }}
           shadow="lg"
           border={'2px gray.800 solid'}
@@ -95,18 +96,24 @@ export default function ProjectCard(props) {
               color="gray.700"
               _dark={{ color: 'gray.200' }}
             >
-              <Link href={project.repo} isExternal title="Repository">
+              <Link href={project.repo} isExternal title="Repository" >
                 <Button
+
+                fontSize={'sm'}
                   leftIcon={<AiFillGithub size={'1.5rem'} />}
-                  variant="solid"
+                  variant={'outline'}
+                  shadow={'md'}
                 >
                   Source
                 </Button>
               </Link>
               <Link href={project.demo} isExternal title="View demo">
                 <Button
+                colorScheme={'gray'}
+                fontSize={'sm'}
                   leftIcon={<FaExternalLinkAlt size={'1.5rem'} />}
-                  variant="solid"
+                  variant='outline'
+                  shadow={'md'}
                 >
                   Demo
                 </Button>

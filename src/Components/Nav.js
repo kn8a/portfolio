@@ -51,7 +51,7 @@ export default function Nav() {
             <AnchorLink href="#top" title="Kn8 Home Page">
               <Flex
                 pl="2"
-                fontSize="xl"
+                fontSize={'xx-large'}
                 fontWeight="600"
                 alignSelf={'center'}
                 alignItems={'center'}

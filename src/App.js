@@ -11,11 +11,14 @@ import theme from './theme';
 import Background from './Components/Background';
 import Footer from './Components/Footer';
 
+
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Nav />
+      
       <InfoSection />
+      
       <Background />
       <About />
       <Projects />

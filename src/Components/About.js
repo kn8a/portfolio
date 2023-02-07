@@ -20,7 +20,7 @@ import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Animated } from 'react-animated-css';
+
 
 function About() {
   const knightimage = useColorModeValue(Knightlight, Knightdark);
@@ -106,7 +106,7 @@ function About() {
                         computer maintainer" for the 486 machine in my class. I
                         also taught myself how to solder boards and familiarized
                         myself with the functions of various electronic
-                        components. components.
+                        components.
                       </ListItem>
                       <ListItem>
                         At 13, I installed my first Linux distribution, RedHat.
@@ -238,7 +238,7 @@ function About() {
             </Flex>
           </Box>
 
-          <Box width={{ base: '50%', md: '30%' }} alignSelf={'center'}>
+          <Box width={{ base: '50%', md: '30%' }} alignSelf={'center'} zIndex={-110}>    
             <Image id="knightImg" src={knightimage} objectFit={'cover'}></Image>
           </Box>
         </Flex>

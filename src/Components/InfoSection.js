@@ -22,10 +22,10 @@ import {
   FaMicroblog,
 } from 'react-icons/fa';
 
-import CypherText from 'react-cypher-text-loop';
+// import CypherText from 'react-cypher-text-loop';
+import CypherText from './CypherText';
 import ReactPlayer from 'react-player';
-import { GrBlog } from 'react-icons/gr';
-import { SiHashnode } from 'react-icons/si';
+
 
 const iconProps = {
   variant: 'solid',
@@ -47,7 +47,7 @@ const InfoSection = () => {
     >
       <VStack
         minW={{ base: '100%', lg: '600px' }}
-        spacing={{ base: 6, lg: 10 }}
+        spacing={{ base: 6, lg: 6 }}
         px={2}
         alignItems={{ base: 'flex-start', sm: 'flex-start' }}
         mb={0}
@@ -80,17 +80,28 @@ const InfoSection = () => {
           />
         </Heading>
         <Text textAlign="left" maxWidth={'container.sm'}>
-          Passionate about Tech. Lover of web and opensource. <br />
-          <br />
+          Passionate about tech and coding. Lover of web and opensource. <br />
+          
           Explore the projects and skills that make me a versatile and
-          passionate developer ready to tackle new challenges.
+          passionate developer who is ready to tackle new challenges.
         </Text>
-        <Divider />
-        <Flex alignItems="center" justify="center" w="100%" mb={0} pb={0}>
-          <Box textAlign="center" mb={0} pb={0} display="flex" gap={6}>
+        <Divider mt={2} mb={2}/>
+        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
+          <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
             {accounts.map((sc, index) => (
-              <IconButton
-                key={index}
+              <Flex key={index} alignItems='center'
+              borderWidth={'1px'}
+              borderColor={'gray.200'}
+              _dark={{borderColor: 'gray.700'}}
+              p={'0.5'}
+              as={Link}
+                isExternal
+                href={sc.url}
+                aria-label={sc.label}
+                title={sc.label}
+                shadow='sm'
+                rounded={'full'} gap='1'>
+                <IconButton
                 as={Link}
                 isExternal
                 href={sc.url}
@@ -99,8 +110,14 @@ const InfoSection = () => {
                 colorScheme={sc.type}
                 rounded="full"
                 icon={sc.icon}
-                {...iconProps}
+                variant={'solid'}
+                size='md'
+                isRound={true}
+                // {...iconProps}
               />
+              <Text fontSize={'small'} mr={2}><small>{sc.label}</small></Text>
+              </Flex>
+              
             ))}
           </Box>
         </Flex>
@@ -138,7 +155,7 @@ const InfoSection = () => {
 const accounts = [
   {
     url: 'https://github.com/kn8a',
-    label: 'Github Profile',
+    label: 'Github',
     type: 'gray',
     icon: <FaGithub />,
   },
@@ -151,7 +168,7 @@ const accounts = [
 
   {
     url: 'https://www.linkedin.com/in/kn8dev/',
-    label: 'LinkedIn Profile',
+    label: 'LinkedIn',
     type: 'gray',
     icon: <FaLinkedin />,
   },

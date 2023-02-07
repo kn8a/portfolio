@@ -8,6 +8,10 @@ const theme = extendTheme({
   fonts: {
     font1: `"Montserrat", sans-serif`
   },
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+  }
 });
 
 export default theme;

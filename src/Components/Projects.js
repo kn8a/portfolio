@@ -195,7 +195,7 @@ function Projects() {
         >
           Projects
         </Heading>
-        <Grid templateColumns="repeat(auto-fit, minmax(320px, 1fr))">
+        <Grid templateColumns="repeat(auto-fill, minmax(350px, 1fr))">
           {projects.slice(0, drawerBreakpoint).map(project => {
             return (
               <Box>
@@ -205,6 +205,7 @@ function Projects() {
           })}
           <Flex grow={1} alignItems={'center'} justifyContent={'center'}>
             <Button
+              
               size={'lg'}
               variant={'solid'}
               shadow={'md'}

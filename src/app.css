@@ -200,3 +200,6 @@ body {
   transform: scale(1.05);    
 }
 
+#tsparticles {
+  z-index: -10;
+}

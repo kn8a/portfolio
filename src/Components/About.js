@@ -1,18 +1,9 @@
 import {
   Flex,
-  Accordion,
-  AccordionItem,
-  AccordionIcon,
-  AccordionPanel,
-  AccordionButton,
   Box,
-  ListItem,
-  UnorderedList,
   Container,
   Heading,
-  Image,
   useColorModeValue,
-  Link,
   Text,
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
@@ -23,11 +14,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import BGParticles from './BGParticles';
 import AsciiArt from './AsciiArt';
 
+
 function About() {
-  
-
-
-
   const knightimage = useColorModeValue(Knightlight, Knightdark);
 
   return (
@@ -38,12 +26,13 @@ function About() {
         p={{ base: 5, md: 10 }}
         mx="auto"
         marginTop={0}
+        // border={'1px'}
       >
         <Flex
           paddingTop={10}
           alignItems={'flex-start'}
           gap={'2rem'}
-          border={0}
+          // border={'2px'}
           direction={{ base: 'column-reverse', md: 'row' }}
           justifyContent={'flex-start'}
         >
@@ -56,7 +45,7 @@ function About() {
                 gap={4}
                 flexDirection={'column'}
                 display={'flex'}
-                border={0}
+                // border={'1px'}
               >
                 <Heading
                   as={'h2'}
@@ -71,7 +60,7 @@ function About() {
                 >
                   About me
                 </Heading>
-                <Box pl={4} pr={6}>
+                <Box pl={2}>
                   <Text>
                     <p>
                       🖥️ From fixing and maintaining the classroom computer at
@@ -94,7 +83,7 @@ function About() {
                       <AnchorLink className="about-link" href="#projects">
                         projects
                       </AnchorLink>{' '}
-                      using Javascript, C, and Python, as well as, tools and
+                      using Javascript, C, and Python, as well as tools and
                       frameworks such as NodeJS, React, MongoDB and many{' '}
                       <AnchorLink className="about-link" href="#skills">
                         others
@@ -117,12 +106,12 @@ function About() {
 
           <Box
             className="knightImage"
-            width={{ base: '50%', md: '30%' }}
             alignSelf={'center'}
             zIndex={'-2'}
-            objectFit="cover"
+            // border={'1px'}
+            // borderColor={'red'}
           >
-            <AsciiArt/>
+            <AsciiArt />
             {/* <Image id="knightImg" src={knightimage} objectFit={'cover'}></Image> */}
             {/* <BGParticles/> */}
           </Box>

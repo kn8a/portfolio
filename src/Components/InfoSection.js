@@ -24,7 +24,7 @@ import {
 
 // import CypherText from 'react-cypher-text-loop';
 import CypherText from './CypherText';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 
 
 const iconProps = {
@@ -32,6 +32,8 @@ const iconProps = {
   size: 'lg',
   isRound: true,
 };
+
+
 
 const InfoSection = () => {
   return (
@@ -145,6 +147,7 @@ const InfoSection = () => {
             width={'100%'}
             height={'100%'}
             url="https://youtu.be/zE8vtrzFuCI"
+            
           />
         </Box>
       </Flex>

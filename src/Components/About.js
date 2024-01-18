@@ -6,12 +6,10 @@ import {
   useColorModeValue,
   Text,
 } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
 import Knightdark from '../assets/images/knight-gd1.svg';
 import Knightlight from '../assets/images/knight-gl.svg';
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import BGParticles from './BGParticles';
 import AsciiArt from './AsciiArt';
 
 
@@ -61,8 +59,8 @@ function About() {
                   About me
                 </Heading>
                 <Box pl={2}>
-                  <Text>
-                    <p>
+                  <Text >
+                    <p >
                       🖥️ From fixing and maintaining the classroom computer at
                       age 10 to running my own computer repair business at 18,
                       I've been a tech enthusiast as far as I can remember.

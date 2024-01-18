@@ -14,12 +14,8 @@ import {
 } from '@chakra-ui/react';
 import {
   FaGithub,
-  FaDev,
   FaLinkedin,
-  FaQuora,
-  FaTwitter,
   FaBlog,
-  FaMicroblog,
 } from 'react-icons/fa';
 
 // import CypherText from 'react-cypher-text-loop';

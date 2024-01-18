@@ -12,24 +12,17 @@ import {
   Divider,
   Link,
 } from '@chakra-ui/react';
-import {
-  FaGithub,
-  FaLinkedin,
-  FaBlog,
-} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaBlog } from 'react-icons/fa';
 
 // import CypherText from 'react-cypher-text-loop';
 import CypherText from './CypherText';
 import ReactPlayer from 'react-player/lazy';
-
 
 const iconProps = {
   variant: 'solid',
   size: 'lg',
   isRound: true,
 };
-
-
 
 const InfoSection = () => {
   return (
@@ -78,44 +71,49 @@ const InfoSection = () => {
           />
         </Heading>
         <Text textAlign="left" maxWidth={'container.sm'}>
-          Passionate about tech and coding. Lover of web and opensource. <br />
-          
-          Explore the projects and skills that make me a versatile and
-          passionate developer who is ready to tackle new challenges.
+          Tech lover and coding enthusiast! Embracing the power of the web, AI
+          and open source. <br />
+          Explore my diverse projects and skills that define me as a dynamic
+          developer, always up for thrilling new challenges!
         </Text>
-        <Divider mt={2} mb={2}/>
+        <Divider mt={2} mb={2} />
         <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
           <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
             {accounts.map((sc, index) => (
-              <Flex key={index} alignItems='center'
-              borderWidth={'1px'}
-              borderColor={'gray.200'}
-              _dark={{borderColor: 'gray.700'}}
-              p={'0.5'}
-              as={Link}
-                isExternal
-                href={sc.url}
-                aria-label={sc.label}
-                title={sc.label}
-                shadow='sm'
-                rounded={'full'} gap='1'>
-                <IconButton
+              <Flex
+                key={index}
+                alignItems="center"
+                borderWidth={'1px'}
+                borderColor={'gray.200'}
+                _dark={{ borderColor: 'gray.700' }}
+                p={'0.5'}
                 as={Link}
                 isExternal
                 href={sc.url}
                 aria-label={sc.label}
                 title={sc.label}
-                colorScheme={sc.type}
-                rounded="full"
-                icon={sc.icon}
-                variant={'solid'}
-                size='md'
-                isRound={true}
-                // {...iconProps}
-              />
-              <Text fontSize={'small'} mr={2}><small>{sc.label}</small></Text>
+                shadow="sm"
+                rounded={'full'}
+                gap="1"
+              >
+                <IconButton
+                  as={Link}
+                  isExternal
+                  href={sc.url}
+                  aria-label={sc.label}
+                  title={sc.label}
+                  colorScheme={sc.type}
+                  rounded="full"
+                  icon={sc.icon}
+                  variant={'solid'}
+                  size="md"
+                  isRound={true}
+                  // {...iconProps}
+                />
+                <Text fontSize={'small'} mr={2}>
+                  <small>{sc.label}</small>
+                </Text>
               </Flex>
-              
             ))}
           </Box>
         </Flex>
@@ -143,7 +141,6 @@ const InfoSection = () => {
             width={'100%'}
             height={'100%'}
             url="https://youtu.be/zE8vtrzFuCI"
-            
           />
         </Box>
       </Flex>

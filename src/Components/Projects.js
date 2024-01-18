@@ -19,6 +19,15 @@ function Projects() {
 
   const projects = [
     {
+      name: 'Product Prediction',
+      description: 'Machine Learning product prediction',
+      stack: 'Python, sklearn, pandas, matplotlib, easygui',
+      image:
+        'https://github.com/kn8a/ML-product-predict/blob/master/visuals/showcase.jpg?raw=true',
+      repo: 'https://github.com/kn8a/ML-product-predict/tree/master',
+      demo: '',
+    },
+    {
       name: 'KortGo',
       description: 'Sports venue booking system',
       stack: 'NodeJS, MongoDb, React',
@@ -54,15 +63,15 @@ function Projects() {
       repo: 'https://github.com/kn8a/shopping-cart',
       demo: 'https://kn8a.github.io/shopping-cart/',
     },
-    {
-      name: 'Find the Country',
-      description: `"Where's Waldo" style game`,
-      stack: 'React, Firebase',
-      image:
-        'https://user-images.githubusercontent.com/88045655/172295420-53bdab44-69cc-446d-b2ad-c814b584dcdf.JPG',
-      repo: 'https://github.com/kn8a/find-the-country',
-      demo: 'https://kn8a.github.io/find-the-country/',
-    },
+    // {
+    //   name: 'Find the Country',
+    //   description: `"Where's Waldo" style game`,
+    //   stack: 'React, Firebase',
+    //   image:
+    //     'https://user-images.githubusercontent.com/88045655/172295420-53bdab44-69cc-446d-b2ad-c814b584dcdf.JPG',
+    //   repo: 'https://github.com/kn8a/find-the-country',
+    //   demo: 'https://kn8a.github.io/find-the-country/',
+    // },
     {
       name: 'Rock-Paper-Scissors',
       description: 'Classic Rock-Paper-Scissors game',
@@ -205,7 +214,6 @@ function Projects() {
           })}
           <Flex grow={1} alignItems={'center'} justifyContent={'center'}>
             <Button
-              
               size={'lg'}
               variant={'solid'}
               shadow={'md'}

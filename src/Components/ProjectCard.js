@@ -110,6 +110,7 @@ export default function ProjectCard(props) {
               >
                 <Link href={project.repo} isExternal title="Repository">
                   <Button
+                    colorScheme={'blue'}
                     fontSize={'sm'}
                     leftIcon={<AiFillGithub size={'1.5rem'} />}
                     variant={'outline'}
@@ -121,7 +122,7 @@ export default function ProjectCard(props) {
                 {project.demo && (
                   <Link href={project.demo} isExternal title="View demo">
                     <Button
-                      colorScheme={'gray'}
+                      colorScheme={'green'}
                       fontSize={'sm'}
                       leftIcon={<FaExternalLinkAlt size={'1.5rem'} />}
                       variant="outline"

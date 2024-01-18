@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Text } from '@chakra-ui/react';
-import Tilt from 'react-parallax-tilt';
 
 const asciiText = [
   '                  ###########',
@@ -104,9 +103,7 @@ const AsciiArt = () => {
       justifyItems={'center'}
       fontSize={11}
     >
-      <Tilt>
-        <pre style={asciiArtStyle}>{knightText}</pre>
-      </Tilt>
+      <pre style={asciiArtStyle}>{knightText}</pre>
     </Text>
   );
 };

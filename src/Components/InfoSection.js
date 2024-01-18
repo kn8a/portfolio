@@ -107,6 +107,7 @@ const InfoSection = () => {
                   icon={sc.icon}
                   variant={'solid'}
                   size="md"
+                  fontSize="x-large"
                   isRound={true}
                   // {...iconProps}
                 />

@@ -11,6 +11,8 @@ import {
   DrawerCloseButton,
 } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
+import 'animate.css/animate.min.css';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Projects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -213,15 +215,23 @@ function Projects() {
             );
           })}
           <Flex grow={1} alignItems={'center'} justifyContent={'center'}>
-            <Button
-              size={'lg'}
-              variant={'solid'}
-              shadow={'md'}
-              ref={btnRef}
-              onClick={onOpen}
+            <AnimationOnScroll
+              animateIn="animate__tada"
+              initiallyVisible={false}
             >
-              See more projects
-            </Button>
+              <Button
+                size={'lg'}
+                variant={'outline'}
+                shadow={'md'}
+                ref={btnRef}
+                onClick={onOpen}
+                colorScheme={'green'}
+                fontSize={'x-large'}
+                // p={8}
+              >
+                See more projects...
+              </Button>
+            </AnimationOnScroll>
           </Flex>
         </Grid>
       </Container>
@@ -246,7 +256,12 @@ function Projects() {
             })}
           </DrawerBody>
           <DrawerFooter alignContent={'center'}>
-            <Button variant="outline" mx={'auto'} onClick={onClose}>
+            <Button
+              variant="outline"
+              colorScheme="red"
+              mx={'auto'}
+              onClick={onClose}
+            >
               Close
             </Button>
           </DrawerFooter>

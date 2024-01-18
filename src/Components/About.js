@@ -3,18 +3,17 @@ import {
   Box,
   Container,
   Heading,
-  useColorModeValue,
+  // useColorModeValue,
   Text,
 } from '@chakra-ui/react';
-import Knightdark from '../assets/images/knight-gd1.svg';
-import Knightlight from '../assets/images/knight-gl.svg';
+// import Knightdark from '../assets/images/knight-gd1.svg';
+// import Knightlight from '../assets/images/knight-gl.svg';
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import AsciiArt from './AsciiArt';
-import Tilt from 'react-parallax-tilt';
 
 function About() {
-  const knightimage = useColorModeValue(Knightlight, Knightdark);
+  // const knightimage = useColorModeValue(Knightlight, Knightdark);
 
   return (
     <>

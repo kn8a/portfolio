@@ -21,6 +21,7 @@ import {
 //import { BsPhone } from 'react-icons/bs';
 //import { HiOutlineMail } from 'react-icons/hi';
 import emailjs from '@emailjs/browser';
+import { FiSend } from 'react-icons/fi';
 
 const contactOptions = [
   // {
@@ -208,6 +209,8 @@ const Contact = () => {
               type={'submit'}
               isLoading={submittingForm}
               loadingText="Submitting"
+              leftIcon={<FiSend size={'1.5rem'} />}
+              shadow="md"
             >
               Send Message
             </Button>

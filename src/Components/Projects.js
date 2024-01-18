@@ -1,6 +1,7 @@
 import { Flex, Heading, Grid, Container, Box, Button } from '@chakra-ui/react';
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import { VscFileSubmodule } from 'react-icons/vsc';
 import {
   Drawer,
   DrawerBody,
@@ -218,6 +219,7 @@ function Projects() {
             <AnimationOnScroll
               animateIn="animate__tada"
               initiallyVisible={false}
+              animateOnce={true}
             >
               <Button
                 size={'lg'}
@@ -226,8 +228,8 @@ function Projects() {
                 ref={btnRef}
                 onClick={onOpen}
                 colorScheme={'green'}
-                fontSize={'x-large'}
-                // p={8}
+                fontSize={'large'}
+                leftIcon={<VscFileSubmodule size={'1.5rem'} />}
               >
                 See more projects...
               </Button>

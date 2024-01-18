@@ -56,11 +56,11 @@ const AsciiArt = () => {
   );
 
   const [knightText, setKnightText] = useState(replacedLines.join('\n'));
-  const [offset, setOffset] = useState(0);
+  // const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const onScroll = () => {
-      setOffset(window.scrollY);
+      // setOffset(window.scrollY);
 
       let replacementIndex = 0;
 
@@ -90,7 +90,7 @@ const AsciiArt = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  });
 
   const asciiArtStyle = {
     lineHeight: '1', // Adjust the value to reduce or increase line spacing

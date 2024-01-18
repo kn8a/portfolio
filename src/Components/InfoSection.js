@@ -18,11 +18,11 @@ import { FaGithub, FaLinkedin, FaBlog } from 'react-icons/fa';
 import CypherText from './CypherText';
 import ReactPlayer from 'react-player/lazy';
 
-const iconProps = {
-  variant: 'solid',
-  size: 'lg',
-  isRound: true,
-};
+// const iconProps = {
+//   variant: 'solid',
+//   size: 'lg',
+//   isRound: true,
+// };
 
 const InfoSection = () => {
   return (

@@ -55,20 +55,20 @@ function BGParticles() {
               enable: true,
               mode: ["repulse", "bubble"]
             },
-            resize: true
+            resize: false
           },
           modes: {
             push: { quantity: 4, radius: 50 },
             repulse: { distance: 100, duration: 0.4 },
             grab: {
-              distance: 120,
+              distance: 200,
               links: {
                 opacity: 1
               }
             },
             bubble: {
-              distance: 200,
-              size: 4,
+              distance: 250,
+              size: 8,
               duration: 2,
               opacity: 0.3
             }

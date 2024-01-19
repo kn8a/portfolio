@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Box, Button, Flex, IconButton } from '@chakra-ui/react';
-import { FaRegPlayCircle, FaRegPauseCircle, FaUndo, FaPause, FaPlay } from 'react-icons/fa';
+import { Button, IconButton } from '@chakra-ui/react';
+import { FaUndo, FaPause, FaPlay } from 'react-icons/fa';
 
 const AudioPlayer = () => {
   const audioRef = useRef(null);

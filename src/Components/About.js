@@ -11,8 +11,7 @@ import {
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import AsciiArt from './AsciiArt';
-import { TextToSpeech, Positions, Sizes } from 'tts-react';
-import ReactPlayer from 'react-player/lazy';
+
 
 import AudioPlayer from './AudioPlayer';
 

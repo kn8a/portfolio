@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { ChakraProvider, Flex, ColorModeScript } from '@chakra-ui/react';
 import Nav from './Components/Nav';
 import About from './Components/About';
 import InfoSection from './Components/InfoSection';
@@ -16,6 +16,7 @@ import BGParticles from './Components/BGParticles';
 function App() {
   return (
     <ChakraProvider theme={theme} >
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Nav />
       
       <InfoSection />

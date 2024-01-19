@@ -61,7 +61,7 @@ export default function Nav() {
               </Flex>
             </AnchorLink>
           </Flex>
-          <HStack display="flex" alignItems="center" spacing={1}>
+          <HStack display="flex" alignItems="center" spacing={1} pr={4}>
             <HStack
               spacing={1}
               mr={0}
@@ -135,11 +135,32 @@ export default function Nav() {
                 bg="gray.100"
                 _dark={{ bg: 'gray.700' }}
               >
-                <CloseButton
-                  aria-label="Close menu"
-                  onClick={mobileNav.onClose}
-                  size={'lg'}
-                />
+                <Flex justifyContent={'space-between'} mx="auto" width={'full'}>
+                  <Flex alignItems="center">
+                    <AnchorLink href="#top" title="Kn8 Home Page">
+                      <Image src={logo} boxSize={'2rem'} />
+                    </AnchorLink>
+                    <AnchorLink href="#top" title="Kn8 Home Page">
+                      <Flex
+                        pl="2"
+                        fontSize={'xx-large'}
+                        fontWeight="600"
+                        alignSelf={'center'}
+                        alignItems={'center'}
+                        fontFamily={'font2'}
+                      >
+                        Kn8
+                      </Flex>
+                    </AnchorLink>
+                  </Flex>
+
+                  <CloseButton
+                    aria-label="Close menu"
+                    onClick={mobileNav.onClose}
+                    size={'lg'}
+                    alignSelf={'right'}
+                  />
+                </Flex>
                 <AnchorLink href="#about">
                   <Button
                     w="full"

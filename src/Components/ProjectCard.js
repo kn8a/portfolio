@@ -31,9 +31,9 @@ export default function ProjectCard(props) {
 
   return (
     <Flex p={5} w="full" alignItems="center" justifyContent="center">
-      <div className="project-card-border">
-        <Tilt
+      <Tilt
           // className="parallax-effect-glare-scale"
+          
           perspective={800}
           // className="parallax-effect"
           tiltEnable={true}
@@ -43,9 +43,11 @@ export default function ProjectCard(props) {
           glarePosition="all"
           tiltMaxAngleX={5}
           tiltMaxAngleY={5}
-
+          glareBorderRadius={'10px'}
           // scale={1.02}
         >
+      <div className="project-card-border">
+        
           <Box
             p={2}
             w="350px"
@@ -135,8 +137,9 @@ export default function ProjectCard(props) {
               </Flex>
             </Box>
           </Box>
-        </Tilt>
+        
       </div>
+      </Tilt>
     </Flex>
   );
 }

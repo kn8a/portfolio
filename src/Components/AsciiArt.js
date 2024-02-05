@@ -53,45 +53,47 @@ const AsciiArt = () => {
 
   const regex = new RegExp(searchString, 'g');
   const replacedLines = asciiLines.map(line =>
-    line.replace(regex, replacements[4])
+    line.replace(regex, replacements[0]) //change 4 to 0 to start with a .
   );
 
   const [knightText, setKnightText] = useState(replacedLines.join('\n'));
-  // const [offset, setOffset] = useState(0);
+  
+  //! uncomment below to enable change of characters on scroll
+  const [offset, setOffset] = useState(0);
 
-  // useEffect(() => {
-  //   const onScroll = () => {
-  //     // setOffset(window.scrollY);
+  useEffect(() => {
+    const onScroll = () => {
+      // setOffset(window.scrollY);
 
-  //     let replacementIndex = 4;
+      let replacementIndex = 0;
 
-  //     if (window.scrollY > 134 && window.scrollY < 250) {
-  //       replacementIndex = 1;
-  //     } else if (window.scrollY > 249 && window.scrollY < 320) {
-  //       replacementIndex = 2;
-  //     } else if (window.scrollY > 319 && window.scrollY < 450) {
-  //       replacementIndex = 3;
-  //     } else if (window.scrollY > 449 && window.scrollY < 600) {
-  //       replacementIndex = 4;
-  //     } else if (window.scrollY > 599 && window.scrollY < 700) {
-  //       replacementIndex = 3;
-  //     } else if (window.scrollY > 699 && window.scrollY < 800) {
-  //       replacementIndex = 2;
-  //     } else if (window.scrollY > 799 && window.scrollY < 900) {
-  //       replacementIndex = 2;
-  //     }
-  //     const regex = new RegExp(searchString, 'g');
-  //     const replacedLines = asciiLines.map(line =>
-  //       line.replace(regex, replacements[replacementIndex])
-  //     );
-  //     setKnightText(replacedLines.join('\n'));
-  //   };
+      if (window.scrollY > 134 && window.scrollY < 250) {
+        replacementIndex = 1;
+      } else if (window.scrollY > 249 && window.scrollY < 320) {
+        replacementIndex = 2;
+      } else if (window.scrollY > 319 && window.scrollY < 450) {
+        replacementIndex = 3;
+      } else if (window.scrollY > 449 && window.scrollY < 600) {
+        replacementIndex = 4;
+      } else if (window.scrollY > 599 && window.scrollY < 700) {
+        replacementIndex = 3;
+      } else if (window.scrollY > 699 && window.scrollY < 800) {
+        replacementIndex = 2;
+      } else if (window.scrollY > 799 && window.scrollY < 900) {
+        replacementIndex = 2;
+      }
+      const regex = new RegExp(searchString, 'g');
+      const replacedLines = asciiLines.map(line =>
+        line.replace(regex, replacements[replacementIndex])
+      );
+      setKnightText(replacedLines.join('\n'));
+    };
 
-  //   window.removeEventListener('scroll', onScroll);
-  //   window.addEventListener('scroll', onScroll, { passive: true });
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // });
+    return () => window.removeEventListener('scroll', onScroll);
+  });
 
   const asciiArtStyle = {
     lineHeight: '1',
@@ -107,12 +109,14 @@ const AsciiArt = () => {
       fontSize={11}
     >
       <Tilt
-         perspective={300}
+         perspective={400}
         //  glareEnable={true}
         //  glareMaxOpacity={0.75}
         //  glarePosition="all"
          scale={1}
          trackOnWindow={true}
+         tiltMaxAngleX={0}
+          tiltMaxAngleY={7}
         //  glareBorderRadius={'100%'}
          tiltReverse={true}
         >

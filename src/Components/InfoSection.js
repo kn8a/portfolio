@@ -35,21 +35,24 @@ const InfoSection = () => {
     <Container
       maxW="7xl"
       p={{ base: 5, md: 10 }}
+      pt={{ base: 10, md: 0 }}
       pb={0}
       mb={0}
       id={'top'}
       display="flex"
       justifyContent={'space-between'}
-      flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row' }}
+      flexDirection={{ base: 'column-reverse', sm: 'column-reverse', md: 'column', lg: 'row' }}
     >
       <VStack
         minW={{ base: '100%', lg: '600px' }}
-        spacing={{ base: 6, lg: 6 }}
+        spacing={{ base: 2, lg: 6 }}
         px={2}
         alignItems={{ base: 'flex-start', sm: 'flex-start' }}
         mb={0}
         pb={0}
         pl={{ base: '2px', md: 0 }}
+        // borderColor={'green'}
+        // borderWidth={'2px'}
       >
         <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
           <Text fontSize="sm" marginTop={20}></Text>
@@ -135,16 +138,18 @@ const InfoSection = () => {
       >
         
         
-        <Boop rotation={20} timing={200}>
+        {/* <Boop rotation={20} timing={200}> */}
         <Image
           borderRadius='full'
           boxSize='300px'
           src='/kn8image.jpg'
-          alt='Dan Abramov'
+          alt='Andrew Knight'
+          boxShadow='dark-lg'
+          
         >
 
         </Image>
-        </Boop>
+        {/* </Boop> */}
         {/* <Box
           shadow={'md'}
           width={{ base: '90%', sm: '100%' }}

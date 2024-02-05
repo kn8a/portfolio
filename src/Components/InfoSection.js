@@ -7,12 +7,18 @@ import {
   Stack,
   Flex,
   Box,
+  Image,
   Spinner,
   IconButton,
   Divider,
   Link,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaBlog } from 'react-icons/fa';
+import Tilt from 'react-parallax-tilt';
+import Boop from './Boop';
+
+
+
 
 // import CypherText from 'react-cypher-text-loop';
 import CypherText from './CypherText';
@@ -127,7 +133,19 @@ const InfoSection = () => {
         pt={{ base: '10', sm: '10', md: '10', lg: '10' }}
         // border={'2px '}
       >
-        <Box
+        
+        
+        <Boop rotation={20} timing={200}>
+        <Image
+          borderRadius='full'
+          boxSize='300px'
+          src='/kn8image.jpg'
+          alt='Dan Abramov'
+        >
+
+        </Image>
+        </Boop>
+        {/* <Box
           shadow={'md'}
           width={{ base: '90%', sm: '100%' }}
           maxW={'400px'}
@@ -143,7 +161,7 @@ const InfoSection = () => {
             height={'100%'}
             url="https://youtu.be/zE8vtrzFuCI"
           />
-        </Box>
+        </Box> */}
       </Flex>
     </Container>
   );
@@ -163,12 +181,12 @@ const accounts = [
     icon: <FaBlog />,
   },
 
-  {
-    url: 'https://www.linkedin.com/in/kn8dev/',
-    label: 'LinkedIn',
-    type: 'gray',
-    icon: <FaLinkedin />,
-  },
+  // {
+  //   url: 'https://www.linkedin.com/in/kn8dev/',
+  //   label: 'LinkedIn',
+  //   type: 'gray',
+  //   icon: <FaLinkedin />,
+  // },
 ];
 
 export default InfoSection;

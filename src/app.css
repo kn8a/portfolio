@@ -4,12 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 
+
 body {
     /* background-image: url('./assets/images/chess-bg.svg') !important; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
+    --neon-text-color: #f40;
+  --neon-border-color: #08f;
 
 }
 
@@ -203,3 +206,13 @@ body {
 #tsparticles {
   z-index: -10;
 }
+
+
+.ascii-text {
+
+  text-orientation: sideways;
+     
+}
+
+
+

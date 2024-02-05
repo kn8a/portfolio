@@ -12,6 +12,7 @@
     "@fontsource/montserrat": "^4.5.12",
     "@fontsource/montserrat-alternates": "^4.5.10",
     "@fontsource/vt323": "^4.5.10",
+    "@react-spring/web": "^9.7.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",

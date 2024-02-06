@@ -54,8 +54,8 @@ const InfoSection = () => {
         // borderColor={'green'}
         // borderWidth={'2px'}
       >
-        <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
-          <Text fontSize="sm" marginTop={20}></Text>
+        <Stack justifyContent="center" alignItems="center" mb={0} pb={0} >
+          <Text fontSize="sm" marginTop={{ base: '5', sm: '5', md: '20', lg: '20' }}></Text>
         </Stack>
         <Heading
           textAlign={{ base: 'left', sm: 'left' }}
@@ -86,7 +86,7 @@ const InfoSection = () => {
           developer, always up for thrilling new challenges!
         </Text>
         <Divider mt={2} mb={2} />
-        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
+        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0} >
           <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
             {accounts.map((sc, index) => (
               <Flex
@@ -141,7 +141,7 @@ const InfoSection = () => {
         {/* <Boop rotation={20} timing={200}> */}
         <Image
           borderRadius='full'
-          boxSize='300px'
+          boxSize={{ base: '200px', md: '250px' }}
           src='/kn8image.jpg'
           alt='Andrew Knight'
           boxShadow='dark-lg'

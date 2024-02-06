@@ -35,13 +35,13 @@ const InfoSection = () => {
     <Container
       maxW="7xl"
       p={{ base: 5, md: 10 }}
-      pt={{ base: 10, md: 0 }}
+      pt={{ base: 10, md: 20, lg:0 }}
       pb={0}
       mb={0}
       id={'top'}
       display="flex"
       justifyContent={'space-between'}
-      flexDirection={{ base: 'column-reverse', sm: 'column-reverse', md: 'column', lg: 'row' }}
+      flexDirection={{ base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'row' }}
     >
       <VStack
         minW={{ base: '100%', lg: '600px' }}
@@ -134,6 +134,7 @@ const InfoSection = () => {
         alignItems={'center'}
         justifyContent={{ base: 'center', lg: 'center' }}
         pt={{ base: '10', sm: '10', md: '10', lg: '10' }}
+        mt={{ base: '5', sm: '5', md: '0', lg: '0' }}
         // border={'2px '}
       >
         

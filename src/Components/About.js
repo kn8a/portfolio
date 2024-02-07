@@ -3,7 +3,7 @@ import {
   Box,
   Container,
   Heading,
-  // useColorModeValue,
+  useColorModeValue,
   Text,
 } from '@chakra-ui/react';
 // import Knightdark from '../assets/images/knight-gd1.svg';
@@ -11,8 +11,6 @@ import {
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import AsciiArt from './AsciiArt';
-
-
 import AudioPlayer from './AudioPlayer';
 
 function About() {
@@ -39,7 +37,7 @@ function About() {
           <Box border={0}>
             <Flex>
               <Box
-                defaultIndex={[2]}
+                defaultindex={[2]}
                 maxWidth="container.lg"
                 m={4}
                 gap={4}
@@ -47,9 +45,14 @@ function About() {
                 display={'flex'}
                 // border={'1px'}
               >
-                <Flex justifyItems={'center'} alignItems={'baseline'} justifyContent={'space-between'} direction={{ base: 'column', md: 'row' }} placeContent={'flex-start'}>
+                <Flex
+                  justifyItems={'center'}
+                  alignItems={'baseline'}
+                  justifyContent={'space-between'}
+                  direction={{ base: 'column', md: 'row' }}
+                  placeContent={'flex-start'}
+                >
                   <Heading
-                  
                     as={'h2'}
                     minWidth={180}
                     size={'xl'}
@@ -63,43 +66,9 @@ function About() {
                   >
                     About me
                   </Heading>
-                  <AudioPlayer/>
+                  <AudioPlayer />
                 </Flex>
-                {/* <Flex>
-                  <TextToSpeech
-                    lang={''}
-                    align="horizontal"
-                    size={Sizes.MEDIUM}
-                    rate={'1.2'}
-                  >
-                    <Text visibility={'hidden'} height={'0px'}>
-                      From fixing and maintaining the classroom computer at age
-                      10 to running my own computer repair business at 18, I've
-                      been a tech enthusiast as far as I can remember. After a
-                      detour into sales, I jumped into real estate, where my
-                      tech skills came to the forefront as I built websites and
-                      innovative tools. Recognized for my abilities, I got the
-                      opportunity to design and build the company's websites, as
-                      well as, lead the implementation and testing of a CRM,
-                      lead distribution tool, and other resources for agents.
-                    </Text>
-                    <Text visibility={'hidden'} height={'0px'}>
-                      Then, in 2020, I thought, "Why not level-up to
-                      full-stack?" So, I hopped into Harvard's CS50 program,
-                      aced it, and then rocked The Odin Project. In the process,
-                      I crafted a variety of projects using Javascript, C, and
-                      Python, as well as tools and frameworks such as NodeJS,
-                      React, MongoDB and many others...
-                    </Text>
-                    <Text visibility={'hidden'} height={'0px'}>
-                      And here's the cherry on top — I recently graduated with a
-                      Bachelor of Science in Computer Science, which now makes
-                      me officially a tech pro, and ready to rock the coolest
-                      projects out there!
-                    </Text>
-                  </TextToSpeech>
-                </Flex> */}
-                
+
                 <Box pl={2}>
                   <Text>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15}>
@@ -150,16 +119,9 @@ function About() {
             </Flex>
           </Box>
 
-          <Box
-            className="knightImage"
-            alignSelf={'center'}
-            zIndex={'-2'}
-            // border={'1px'}
-            // borderColor={'red'}
-          >
+          <Box className="knightImage" alignSelf={'center'} zIndex={'-10'}>
             <AsciiArt />
             {/* <Image id="knightImg" src={knightimage} objectFit={'cover'}></Image> */}
-            {/* <BGParticles/> */}
           </Box>
         </Flex>
       </Container>

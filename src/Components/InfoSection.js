@@ -8,40 +8,33 @@ import {
   Flex,
   Box,
   Image,
-  Spinner,
   IconButton,
   Divider,
   Link,
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaBlog } from 'react-icons/fa';
-import Tilt from 'react-parallax-tilt';
-import Boop from './Boop';
+// import Tilt from 'react-parallax-tilt';
+// import Boop from './Boop';
 
-
-
-
-// import CypherText from 'react-cypher-text-loop';
 import CypherText from './CypherText';
-import ReactPlayer from 'react-player/lazy';
-
-// const iconProps = {
-//   variant: 'solid',
-//   size: 'lg',
-//   isRound: true,
-// };
 
 const InfoSection = () => {
   return (
     <Container
       maxW="7xl"
       p={{ base: 5, md: 10 }}
-      pt={{ base: 10, md: 20, lg:0 }}
+      pt={{ base: 10, md: 20, lg: 0 }}
       pb={0}
       mb={0}
       id={'top'}
       display="flex"
       justifyContent={'space-between'}
-      flexDirection={{ base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'row' }}
+      flexDirection={{
+        base: 'column-reverse',
+        sm: 'column-reverse',
+        md: 'column-reverse',
+        lg: 'row',
+      }}
     >
       <VStack
         minW={{ base: '100%', lg: '600px' }}
@@ -51,11 +44,12 @@ const InfoSection = () => {
         mb={0}
         pb={0}
         pl={{ base: '2px', md: 0 }}
-        // borderColor={'green'}
-        // borderWidth={'2px'}
       >
-        <Stack justifyContent="center" alignItems="center" mb={0} pb={0} >
-          <Text fontSize="sm" marginTop={{ base: '5', sm: '5', md: '20', lg: '20' }}></Text>
+        <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
+          <Text
+            fontSize="sm"
+            marginTop={{ base: '5', sm: '5', md: '20', lg: '20' }}
+          ></Text>
         </Stack>
         <Heading
           textAlign={{ base: 'left', sm: 'left' }}
@@ -86,7 +80,7 @@ const InfoSection = () => {
           developer, always up for thrilling new challenges!
         </Text>
         <Divider mt={2} mb={2} />
-        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0} >
+        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
           <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
             {accounts.map((sc, index) => (
               <Flex
@@ -137,19 +131,14 @@ const InfoSection = () => {
         mt={{ base: '5', sm: '5', md: '0', lg: '0' }}
         // border={'2px '}
       >
-        
-        
         {/* <Boop rotation={20} timing={200}> */}
         <Image
-          borderRadius='full'
+          borderRadius="full"
           boxSize={{ base: '200px', md: '250px' }}
-          src='/kn8image.jpg'
-          alt='Andrew Knight'
-          boxShadow='dark-lg'
-          
-        >
-
-        </Image>
+          src="/kn8image.jpg"
+          alt="Andrew Knight"
+          boxShadow="dark-lg"
+        ></Image>
         {/* </Boop> */}
         {/* <Box
           shadow={'md'}

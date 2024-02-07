@@ -3,10 +3,17 @@ import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import theme from './theme'
+import theme from './theme';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
+
+console.error = message => {
+  if (message.startsWith('')) {
+    return;
+  }
+  console.error(message);
+};
 
 root.render(
   <StrictMode>

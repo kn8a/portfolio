@@ -85,7 +85,7 @@ export default function Footer() {
 
           <chakra.a
             href="https://github.com/kn8a"
-            isExternal
+            isexternal="true"
             mx="2"
             color="gray.600"
             _dark={{ color: 'gray.300', _hover: { color: 'gray.400' } }}

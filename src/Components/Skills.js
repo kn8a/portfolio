@@ -106,7 +106,7 @@ function Skills() {
 
       <Flex gap={5} marginTop={5} flexWrap={'wrap'}>
         {skills.map(skill => {
-          return <Skill skill={skill} />;
+          return <Skill skill={skill} key={skill.name} />;
         })}
       </Flex>
     </Container>

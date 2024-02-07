@@ -7,7 +7,7 @@ function Background() {
     'rgba(0, 0, 0, 0.3)'
   );
   return (
-    <ul class="circles">
+    <ul className="circles">
       <li style={{ background: squeres }}></li>
       <li style={{ background: squeres }}></li>
       <li style={{ background: squeres }}></li>

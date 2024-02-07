@@ -210,7 +210,7 @@ function Projects() {
         <Grid templateColumns="repeat(auto-fill, minmax(350px, 1fr))">
           {projects.slice(0, drawerBreakpoint).map(project => {
             return (
-              <Box>
+              <Box key={project.name}>
                 <ProjectCard project={project} />
               </Box>
             );
@@ -251,7 +251,7 @@ function Projects() {
           <DrawerBody>
             {projects.slice(drawerBreakpoint).map(project => {
               return (
-                <Box>
+                <Box key={project.name}>
                   <ProjectCard project={project} />
                 </Box>
               );

@@ -52,19 +52,15 @@ const AsciiArt = () => {
   const asciiLines = asciiText;
 
   const regex = new RegExp(searchString, 'g');
-  const replacedLines = asciiLines.map(line =>
-    line.replace(regex, replacements[0]) //change 4 to 0 to start with a .
+  const replacedLines = asciiLines.map(
+    line => line.replace(regex, replacements[0]) //change 4 to 0 to start with a .
   );
 
   const [knightText, setKnightText] = useState(replacedLines.join('\n'));
-  
-  //! uncomment below to enable change of characters on scroll
-  const [offset, setOffset] = useState(0);
 
+  //! uncomment below to enable change of characters on scroll
   useEffect(() => {
     const onScroll = () => {
-      // setOffset(window.scrollY);
-
       let replacementIndex = 0;
 
       if (window.scrollY > 134 && window.scrollY < 250) {
@@ -97,8 +93,8 @@ const AsciiArt = () => {
 
   const asciiArtStyle = {
     lineHeight: '1',
-    
-     // Adjust the value to reduce or increase line spacing
+
+    // Adjust the value to reduce or increase line spacing
   };
 
   return (
@@ -109,21 +105,15 @@ const AsciiArt = () => {
       fontSize={11}
     >
       <Tilt
-         perspective={400}
-        //  glareEnable={true}
-        //  glareMaxOpacity={0.75}
-        //  glarePosition="all"
-         scale={1}
-         trackOnWindow={true}
-         tiltMaxAngleX={0}
-          tiltMaxAngleY={7}
-        //  glareBorderRadius={'100%'}
-         tiltReverse={true}
-        >
-<pre style={asciiArtStyle} >{knightText}</pre>
-
-        </Tilt>
-      
+        perspective={400}
+        scale={1}
+        trackOnWindow={true}
+        tiltMaxAngleX={0}
+        tiltMaxAngleY={7}
+        tiltReverse={true}
+      >
+        <pre style={asciiArtStyle}>{knightText}</pre>
+      </Tilt>
     </Text>
   );
 };

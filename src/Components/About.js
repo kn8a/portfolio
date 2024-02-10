@@ -6,15 +6,17 @@ import {
   useColorModeValue,
   Text,
 } from '@chakra-ui/react';
-// import Knightdark from '../assets/images/knight-gd1.svg';
-// import Knightlight from '../assets/images/knight-gl.svg';
+import Knightdark from '../assets/images/knight-gd1.svg';
+import Knightlight from '../assets/images/knight-gl.svg';
+import KnightGray from '../assets/images/knight-gray.svg';
 import '@fontsource/la-belle-aurore';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import AsciiArt from './AsciiArt';
 import AudioPlayer from './AudioPlayer';
+import ParticleImage from './ParticleImage';
 
 function About() {
-  // const knightimage = useColorModeValue(Knightlight, Knightdark);
+  const knightimage = useColorModeValue(Knightlight, Knightdark);
 
   return (
     <>
@@ -26,6 +28,7 @@ function About() {
         marginTop={0}
         // border={'1px'}
       >
+        
         <Flex
           paddingTop={10}
           alignItems={'flex-start'}
@@ -119,8 +122,24 @@ function About() {
             </Flex>
           </Box>
 
-          <Box className="knightImage" alignSelf={'center'} zIndex={'-10'}>
-            <AsciiArt />
+          <Box className="knightImage" alignSelf={'center'} >
+          <ParticleImage
+        width = {270}
+        height = {400}
+        src = {KnightGray}
+        particleSize = {3}
+        push = {0.01}
+        threshold = {60}
+        particleType = "square"
+        gap = {3}
+        noise = {0.2}
+        canvasWidth = {290}
+        canvasHeight = {430}
+        returnSpeed = {0.075}
+        
+      />
+            {/* <AsciiArt /> */}
+            
             {/* <Image id="knightImg" src={knightimage} objectFit={'cover'}></Image> */}
           </Box>
         </Flex>

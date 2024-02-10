@@ -28,12 +28,12 @@ const InfoSection = () => {
       mb={0}
       id={'top'}
       display="flex"
-      justifyContent={'space-between'}
+      justifyContent={'space-around'}
       flexDirection={{
         base: 'column-reverse',
         sm: 'column-reverse',
         md: 'column-reverse',
-        lg: 'row',
+        lg: 'row-reverse',
       }}
     >
       <VStack
@@ -44,6 +44,10 @@ const InfoSection = () => {
         mb={0}
         pb={0}
         pl={{ base: '2px', md: 0 }}
+        flex={1}
+        maxW='700px'
+        // border={'2px '}
+        // borderColor='green'
       >
         <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
           <Text
@@ -115,7 +119,7 @@ const InfoSection = () => {
                   // {...iconProps}
                 />
                 <Text fontSize={'small'} mr={2}>
-                  <small>{sc.label}</small>
+                  {sc.label}
                 </Text>
               </Flex>
             ))}
@@ -123,13 +127,15 @@ const InfoSection = () => {
         </Flex>
       </VStack>
       <Flex
-        width={'100%'}
+        // width={'100%'}
+        maxW='400px'
         flex={1}
         alignItems={'center'}
         justifyContent={{ base: 'center', lg: 'center' }}
         pt={{ base: '10', sm: '10', md: '10', lg: '10' }}
         mt={{ base: '5', sm: '5', md: '0', lg: '0' }}
         // border={'2px '}
+        // borderColor='green'
       >
         {/* <Boop rotation={20} timing={200}> */}
         <Image

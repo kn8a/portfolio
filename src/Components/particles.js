@@ -131,8 +131,8 @@ export default class Particles {
       const absDistOrigin = Math.sqrt(dxOrigin ** 2 + dyOrigin ** 2);
       let xRepulse = (-5e5 * dxMouse) / (absDistMouse ** 3 || 1);
       let yRepulse = (-5e5 * dyMouse) / (absDistMouse ** 3 || 1);
-      xRepulse = Math.max(Math.min(xRepulse, 4e3), -4e3);
-      yRepulse = Math.max(Math.min(yRepulse, 4e3), -4e3);
+      xRepulse = Math.max(Math.min(xRepulse, 4000), -4000);
+      yRepulse = Math.max(Math.min(yRepulse, 4000), -4000);
       const vxOrigin = 0 === absDistOrigin ? 0 : this.returnSpeed * dxOrigin;
       const vyOrigin = 0 === absDistOrigin ? 0 : this.returnSpeed * dyOrigin;
       particle.currX += vxOrigin + xRepulse * this.push;
@@ -220,9 +220,10 @@ export default class Particles {
 
   drawStar(x, y, outerRadius, points, innerRadius) {
     this.ctx.beginPath();
+    const angleIncrement = Math.PI / points;
     for (let i = 0; i < 2 * points; i++) {
       const radius = i % 2 === 0 ? outerRadius : innerRadius;
-      const angle = (i * Math.PI) / points;
+      const angle = i * angleIncrement;
       this.ctx.lineTo(
         x + radius * Math.cos(angle),
         y + radius * Math.sin(angle)

@@ -55,7 +55,7 @@ export default function Nav() {
                 fontWeight="600"
                 alignSelf={'center'}
                 alignItems={'center'}
-                fontFamily={'font2'}
+                fontFamily={'font1'}
               >
                 Kn8
               </Flex>
@@ -129,7 +129,7 @@ export default function Nav() {
                 flexDirection="column"
                 p={2}
                 pb={10}
-                spacing={10}
+                spacing={4}
                 rounded="sm"
                 shadow="sm"
                 bg="gray.100"
@@ -147,7 +147,7 @@ export default function Nav() {
                         fontWeight="600"
                         alignSelf={'center'}
                         alignItems={'center'}
-                        fontFamily={'font2'}
+                        fontFamily={'font1'}
                       >
                         Kn8
                       </Flex>

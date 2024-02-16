@@ -39,7 +39,7 @@ export default function Footer() {
               fontWeight="600"
               alignSelf={'center'}
               alignItems={'center'}
-              fontFamily={'font2'}
+              fontFamily={'font1'}
             >
               Kn8
             </Flex>

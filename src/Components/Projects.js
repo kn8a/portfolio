@@ -22,6 +22,15 @@ function Projects() {
 
   const projects = [
     {
+      name: 'React Payment Form',
+      description: 'Reusable interactive payment form',
+      stack: 'React, Chakra UI',
+      image:
+        'https://github.com/kn8a/react-payment-form/assets/88045655/faf1f885-683f-472a-8ba1-4107e3558dc8',
+      repo: 'https://github.com/kn8a/react-payment-form',
+      demo: 'https://kn8a.github.io/react-payment-form/',
+    },
+    {
       name: 'Product Prediction',
       description: 'Machine Learning product prediction',
       stack: 'Python, sklearn, pandas, matplotlib, easygui',

@@ -73,8 +73,8 @@ function About() {
                 </Flex>
 
                 <Box pl={2}>
-                  <Text>
-                    <Text backgroundColor={'chakra-body-bg'} rounded={15}>
+                  <Text lineHeight={1.7}>
+                    <Text backgroundColor={'chakra-body-bg'} rounded={15} >
                       <p>
                         🖥️ From fixing and maintaining the classroom computer at
                         age 10 to running my own computer repair business at 18,

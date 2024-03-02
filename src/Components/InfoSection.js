@@ -57,8 +57,9 @@ const InfoSection = () => {
         </Stack>
         <Heading
           textAlign={{ base: 'left', sm: 'left' }}
-          fontSize={{ base: '1.5rem', md: '2.5rem' }}
+          fontSize={{ base: '1.6rem', md: '2.7rem' }}
           fontFamily={'font1'}
+          lineHeight={1.4}
         >
           Hi! <div id="hand">👋</div>
           <br />I am {process.env.REACT_APP_NAME},
@@ -77,7 +78,7 @@ const InfoSection = () => {
             delay={800}
           />
         </Heading>
-        <Text textAlign="left" maxWidth={'container.sm'}>
+        <Text textAlign="left" maxWidth={'container.sm'} lineHeight={1.7}>
           Tech lover and coding enthusiast! Embracing the power of the web, AI
           and open source. <br />
           Explore my diverse projects and skills that define me as a dynamic
@@ -140,7 +141,7 @@ const InfoSection = () => {
         {/* <Boop rotation={20} timing={200}> */}
         <Image
           borderRadius="full"
-          boxSize={{ base: '200px', md: '250px' }}
+          boxSize={{ base: '200px', md: '250px', lg: '300px' }}
           src="/kn8image.jpg"
           alt="Andrew Knight"
           boxShadow="dark-lg"

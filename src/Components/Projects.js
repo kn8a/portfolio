@@ -42,7 +42,7 @@ function Projects() {
     {
       name: 'KortGo',
       description: 'Sports venue booking system',
-      stack: 'NodeJS, MongoDb, React',
+      stack: 'NodeJS, ExpresssJS, MongoDb, React',
       image:
         'https://user-images.githubusercontent.com/88045655/213618719-c7de00c0-a14b-488f-b3c1-6be4c6b4566b.png',
       repo: 'https://github.com/kn8a/kortgo',
@@ -51,7 +51,7 @@ function Projects() {
     {
       name: 'Sweetnook',
       description: 'Social media app inspired by Facebook',
-      stack: 'NodeJS, MongoDb, React',
+      stack: 'NodeJS, ExpresssJS, MongoDb, React',
       image:
         'https://user-images.githubusercontent.com/88045655/189862036-d063460a-ced4-4c91-8dba-299cc9a17a82.gif',
       repo: 'https://github.com/kn8a/sweetnook',
@@ -60,7 +60,7 @@ function Projects() {
     {
       name: 'Phonebook',
       description: 'Phonebook with CRUD functionality',
-      stack: 'NodeJS, MongoDb, React',
+      stack: 'NodeJS, ExpresssJS, MongoDb, React',
       image:
         'https://user-images.githubusercontent.com/88045655/213617525-45bd9177-aee8-4c3b-851d-d16ef6f5fce7.JPG',
       repo: 'https://github.com/kn8a/phonebook-react',
@@ -153,7 +153,7 @@ function Projects() {
     {
       name: 'Goals',
       description: 'Simple app for goal setting',
-      stack: 'NodeJS, MongoDb, React',
+      stack: 'NodeJS, ExpresssJS, MongoDb, React',
       image:
         'https://user-images.githubusercontent.com/88045655/192803899-10f0996a-6b93-42af-8c13-8caa735e371f.JPG',
       repo: 'https://github.com/kn8a/goals',

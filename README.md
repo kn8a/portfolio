@@ -8,10 +8,9 @@ Live demo: [http://kn8dev.com](http://kn8dev.com)
 ## Features:
 
 - Dark / Light themes according to user's system setting (defaults to light)
-- Fully responsive
+- Responsive
 - Single-page site
 - Contact form using EmailJS - not requiring a backend
-- Youtube welcome video
 - Animated background
 - Projects populated from array within the `Projects.js` component
 - Skills populated from array within the `Skills.js` component

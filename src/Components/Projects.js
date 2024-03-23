@@ -27,8 +27,8 @@ function Projects() {
       stack: 'React, Chakra UI',
       image:
         'https://github.com/kn8a/react-payment-form/assets/88045655/faf1f885-683f-472a-8ba1-4107e3558dc8',
-      repo: 'https://github.com/kn8a/react-payment-form',
-      demo: 'https://kn8a.github.io/react-payment-form/',
+      repo: 'https://github.com/kn8a/react-cc-payment-form',
+      demo: 'https://kn8a.github.io/react-cc-payment-form/',
     },
     {
       name: 'Product Prediction',

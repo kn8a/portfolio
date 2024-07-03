@@ -69,37 +69,24 @@ function About() {
                   >
                     About me
                   </Heading>
-                  <AudioPlayer />
+                  {/* <AudioPlayer /> */}
                 </Flex>
 
                 <Box pl={2}>
                   <Text lineHeight={1.7}>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15} >
                       <p>
-                        🖥️ From fixing and maintaining the classroom computer at
-                        age 10 to running my own computer repair business at 18,
-                        I've been a tech enthusiast as far as I can remember.
-                        After a detour into sales, I jumped into real estate,
-                        where my tech skills came to the forefront as I built
-                        websites and innovative tools. Recognized for my
-                        abilities, I got the opportunity to design and build the
-                        company's websites, as well as, lead the implementation
-                        and testing of a CRM, lead distribution tool, and other
-                        resources for agents. 🌐
+                      💻 I have been a dedicated technology enthusiast from a young age, starting with fixing and maintaining classroom computers at age 10, and progressing to running my own computer repair business by age 18. 
+                      My career took an initial turn into sales, but I quickly transitioned into real estate where my technical skills became invaluable. 
+                      I was responsible for designing and building company websites and leading the implementation and testing of a CRM, lead distribution tool, and other essential resources for agents. 🌟
                       </p>
                     </Text>
                     <br></br>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15}>
                       <p>
-                        🚀 Then, in 2020, I thought, "Why not level-up to
-                        full-stack?" So, I hopped into Harvard's CS50 program,
-                        aced it, and then rocked The Odin Project. In the
-                        process, I crafted a variety of{' '}
-                        <AnchorLink className="about-link" href="#projects">
-                          projects
-                        </AnchorLink>{' '}
-                        using Javascript, C, and Python, as well as tools and
-                        frameworks such as NodeJS, React, MongoDB and many{' '}
+                      🚀 In 2020, I decided to enhance my technical expertise by pursuing full-stack development. 
+                      I completed Harvard's CS50 program with distinction and advanced my skills through The Odin Project. 
+                      During this period, I developed a range of projects utilizing JavaScript, C, and Python, and worked with various tools and frameworks including NodeJS, React, MongoDB and many{' '}
                         <AnchorLink className="about-link" href="#skills">
                           others
                         </AnchorLink>
@@ -110,10 +97,7 @@ function About() {
                     <br></br>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15}>
                       <p>
-                        🎓 And here's the cherry on top — I recently graduated
-                        with a Bachelor of Science in Computer Science, which
-                        now makes me officially a tech pro, and ready to rock
-                        the coolest projects out there! 🚀✨
+                      🎓 Recently, I graduated with a Bachelor of Science in Computer Science, solidifying my credentials as a technology professional. I am now equipped and eager to contribute to innovative and impactful projects in the tech industry. 🌐✨
                       </p>
                     </Text>
                   </Text>

@@ -77,20 +77,15 @@ function About() {
                     <Text backgroundColor={'chakra-body-bg'} rounded={15} >
                       <p>
                       💻 I have been a dedicated technology enthusiast from a young age, starting with fixing and maintaining classroom computers at age 10, and progressing to running my own computer repair business by age 18. 
-                      My career took an initial turn into sales, but I quickly transitioned into real estate where my technical skills became invaluable. 
-                      I was responsible for designing and building company websites and leading the implementation and testing of a CRM, lead distribution tool, and other essential resources for agents. 🌟
+                      My career took an initial turn into sales, and later I transitioned into real estate where my technical skills became invaluable. In addition to operating as an agent and then a broker, I was responsible for designing and building company websites and leading the implementation and testing of a CRM, lead distribution tool, and other essential resources for agents. 🌟
                       </p>
                     </Text>
                     <br></br>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15}>
                       <p>
                       🚀 In 2020, I decided to enhance my technical expertise by pursuing full-stack development. 
-                      I completed Harvard's CS50 program with distinction and advanced my skills through The Odin Project. 
-                      During this period, I developed a range of projects utilizing JavaScript, C, and Python, and worked with various tools and frameworks including NodeJS, React, MongoDB and many{' '}
-                        <AnchorLink className="about-link" href="#skills">
-                          others
-                        </AnchorLink>
-                        ... 🛠️
+                      I completed Harvard's CS50 program and then further advanced my skills through The Odin Project. 
+                      During this period, I developed a range of projects utilizing JavaScript, C, and Python, and worked a variety of tools and frameworks... 🛠️
                       </p>
                     </Text>
 

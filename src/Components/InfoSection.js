@@ -183,12 +183,12 @@ const accounts = [
     icon: <FaBlog />,
   },
 
-  // {
-  //   url: 'https://www.linkedin.com/in/kn8dev/',
-  //   label: 'LinkedIn',
-  //   type: 'gray',
-  //   icon: <FaLinkedin />,
-  // },
+  {
+    url: 'https://www.linkedin.com/in/knightdev/',
+    label: 'LinkedIn',
+    type: 'gray',
+    icon: <FaLinkedin />,
+  },
 ];
 
 export default InfoSection;

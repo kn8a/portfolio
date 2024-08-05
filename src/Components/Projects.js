@@ -22,6 +22,15 @@ function Projects() {
 
   const projects = [
     {
+      name: 'Food Manufacturer Site',
+      description: 'Website for ficticious food manufacturer',
+      stack: 'React, Chakra UI',
+      image:
+        'https://github.com/user-attachments/assets/f70fe81e-fb84-4234-a380-b055fb2ae41c',
+      repo: 'https://github.com/kn8a/food-site',
+      demo: 'https://kn8a.github.io/food-site/',
+    },
+    {
       name: 'React Payment Form',
       description: 'Reusable interactive payment form',
       stack: 'React, Chakra UI',

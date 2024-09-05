@@ -120,114 +120,109 @@ export default class Particles {
 
   render() {
     this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+    const shapes = {
+      'square': (x, y, size) => this.ctx.rect(x - size / 2, y - size / 2, size, size),
+      'circle': (x, y, size) => this.ctx.arc(x, y, size, 0, Math.PI * 2),
+      'hexagon': (x, y, size) => this.drawPolygon(x, y, size, 6),
+      'triangle-down': (x, y, size) => this.drawPolygon(x, y, size, 3, Math.PI),
+      'triangle-up': (x, y, size) => this.drawPolygon(x, y, size, 3),
+      'star': (x, y, size) => this.drawStar(x, y, size, 5, size / 2),
+    };
+  
+    const noiseX = Math.random() * this.noise;
+    const noiseY = Math.random() * this.noise;
+  
     this.particles.forEach(particle => {
+      const currX = particle.currX;
+      const currY = particle.currY;
       const { colors } = particle;
       const { red: r, green: g, blue: b } = colors;
-      const dxMouse = this.mouse.x - particle.currX;
-      const dyMouse = this.mouse.y - particle.currY;
-      const absDistMouse = Math.sqrt(dxMouse ** 2 + dyMouse ** 2);
-      const dxOrigin = particle.springOriginX - particle.currX;
-      const dyOrigin = particle.springOriginY - particle.currY;
-      const absDistOrigin = Math.sqrt(dxOrigin ** 2 + dyOrigin ** 2);
-      let xRepulse = (-5e5 * dxMouse) / (absDistMouse ** 3 || 1);
-      let yRepulse = (-5e5 * dyMouse) / (absDistMouse ** 3 || 1);
+  
+      const dxMouse = this.mouse.x - currX;
+      const dyMouse = this.mouse.y - currY;
+      const absDistMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+      const dxOrigin = particle.springOriginX - currX;
+      const dyOrigin = particle.springOriginY - currY;
+      const absDistOrigin = Math.sqrt(dxOrigin * dxOrigin + dyOrigin * dyOrigin);
+  
+      let xRepulse = (-5e5 * dxMouse) / (absDistMouse * absDistMouse * absDistMouse || 1);
+      let yRepulse = (-5e5 * dyMouse) / (absDistMouse * absDistMouse * absDistMouse || 1);
       xRepulse = Math.max(Math.min(xRepulse, 4000), -4000);
       yRepulse = Math.max(Math.min(yRepulse, 4000), -4000);
-      const vxOrigin = 0 === absDistOrigin ? 0 : this.returnSpeed * dxOrigin;
-      const vyOrigin = 0 === absDistOrigin ? 0 : this.returnSpeed * dyOrigin;
-      particle.currX += vxOrigin + xRepulse * this.push;
-      particle.currY += vyOrigin + yRepulse * this.push;
-      const xc = Math.random() < 0.5 ? -1 : 1;
-      const yc = Math.random() < 0.5 ? -1 : 1;
-      this.noise && (particle.currX += Math.random() * this.noise * xc);
-      this.noise && (particle.currY += Math.random() * this.noise * yc);
+  
+      const vxOrigin = absDistOrigin === 0 ? 0 : this.returnSpeed * dxOrigin;
+      const vyOrigin = absDistOrigin === 0 ? 0 : this.returnSpeed * dyOrigin;
+  
+      particle.currX += vxOrigin + xRepulse * this.push + (Math.random() < 0.5 ? -1 : 1) * noiseX;
+      particle.currY += vyOrigin + yRepulse * this.push + (Math.random() < 0.5 ? -1 : 1) * noiseY;
+  
       this.ctx.fillStyle = `rgba(${r},${g},${b},1)`;
       this.ctx.beginPath();
-      switch (this.particleType) {
-        case 'square':
-          this.ctx.rect(
-            particle.currX - this.particleSize / 2,
-            particle.currY - this.particleSize / 2,
-            this.particleSize,
-            this.particleSize
-          );
-          break;
-        case 'circle':
-          this.ctx.arc(
-            particle.currX,
-            particle.currY,
-            this.particleSize,
-            0,
-            Math.PI * 2
-          );
-          break;
-        case 'hexagon':
-          this.drawPolygon(
-            particle.currX,
-            particle.currY,
-            this.particleSize,
-            6
-          );
-          break;
-        case 'triangle-down':
-          this.drawPolygon(
-            particle.currX,
-            particle.currY,
-            this.particleSize,
-            3,
-            Math.PI
-          );
-          break;
-        case 'triangle-up':
-          this.drawPolygon(
-            particle.currX,
-            particle.currY,
-            this.particleSize,
-            3
-          );
-          break;
-        case 'star':
-          this.drawStar(
-            particle.currX,
-            particle.currY,
-            this.particleSize,
-            5,
-            this.particleSize / 2
-          );
-          break;
-        default:
-          break;
-      }
+      shapes[this.particleType](currX, currY, this.particleSize);
       this.ctx.fill();
     });
-    this.requestAnimationFrameId = requestAnimationFrame(
-      this.render.bind(this)
-    );
+  
+    this.requestAnimationFrameId = requestAnimationFrame(this.render.bind(this));
   }
 
+  // drawPolygon(x, y, size, sides, rotation = 0) {
+  //   this.ctx.save();
+  //   this.ctx.translate(x, y);
+  //   this.ctx.rotate(rotation);
+  //   this.ctx.beginPath();
+  //   for (let i = 0; i < sides; i++) {
+  //     const angle = (Math.PI * 2 * i) / sides;
+  //     this.ctx.lineTo(size * Math.cos(angle), size * Math.sin(angle));
+  //   }
+  //   this.ctx.closePath();
+  //   this.ctx.restore();
+  // }
+
   drawPolygon(x, y, size, sides, rotation = 0) {
-    this.ctx.save();
-    this.ctx.translate(x, y);
-    this.ctx.rotate(rotation);
-    this.ctx.beginPath();
+    const ctx = this.ctx;
+    const increment = Math.PI * 2 / sides;
+    let angle = 0;
+  
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rotation);
+    ctx.beginPath();
+  
     for (let i = 0; i < sides; i++) {
-      const angle = (Math.PI * 2 * i) / sides;
-      this.ctx.lineTo(size * Math.cos(angle), size * Math.sin(angle));
+      ctx.lineTo(size * Math.cos(angle), size * Math.sin(angle));
+      angle += increment;
     }
-    this.ctx.closePath();
-    this.ctx.restore();
+  
+    ctx.closePath();
+    ctx.restore();
   }
+
+  // drawStar(x, y, outerRadius, points, innerRadius) {
+  //   this.ctx.beginPath();
+  //   const angleIncrement = Math.PI / points;
+  //   for (let i = 0; i < 2 * points; i++) {
+  //     const radius = i % 2 === 0 ? outerRadius : innerRadius;
+  //     const angle = i * angleIncrement;
+  //     this.ctx.lineTo(
+  //       x + radius * Math.cos(angle),
+  //       y + radius * Math.sin(angle)
+  //     );
+  //   }
+  //   this.ctx.closePath();
+  // }
 
   drawStar(x, y, outerRadius, points, innerRadius) {
     this.ctx.beginPath();
     const angleIncrement = Math.PI / points;
+    let isOuter = true;
     for (let i = 0; i < 2 * points; i++) {
-      const radius = i % 2 === 0 ? outerRadius : innerRadius;
+      const radius = isOuter ? outerRadius : innerRadius;
       const angle = i * angleIncrement;
       this.ctx.lineTo(
         x + radius * Math.cos(angle),
         y + radius * Math.sin(angle)
       );
+      isOuter = !isOuter;
     }
     this.ctx.closePath();
   }

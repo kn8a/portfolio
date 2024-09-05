@@ -3,20 +3,19 @@ import {
   Box,
   Container,
   Heading,
-  useColorModeValue,
   Text,
 } from '@chakra-ui/react';
-import Knightdark from '../assets/images/knight-gd1.svg';
-import Knightlight from '../assets/images/knight-gl.svg';
+// import Knightdark from '../assets/images/knight-gd1.svg';
+// import Knightlight from '../assets/images/knight-gl.svg';
 import KnightGray from '../assets/images/knight-gray.svg';
 import '@fontsource/la-belle-aurore';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import AsciiArt from './AsciiArt';
-import AudioPlayer from './AudioPlayer';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import AsciiArt from './AsciiArt';
+// import AudioPlayer from './AudioPlayer';
 import ParticleImage from './ParticleImage';
 
 function About() {
-  const knightimage = useColorModeValue(Knightlight, Knightdark);
+  // const knightimage = useColorModeValue(Knightlight, Knightdark);
 
   return (
     <>

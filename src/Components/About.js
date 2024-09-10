@@ -75,7 +75,7 @@ function About() {
                   <Text lineHeight={1.7}>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15} >
                       <p>
-                      💻 I have been a dedicated technology enthusiast from a young age, starting with fixing and maintaining classroom computers at age 10, and progressing to running my own computer repair business by age 18. 
+                      💻 I have been a dedicated technology enthusiast from a young age, starting with fixing and maintaining classroom computers at age 10, and progressing to running my own computer repair business at age 18. 
                       My career took an initial turn into sales, and later I transitioned into real estate where my technical skills became invaluable. In addition to operating as an agent and then a broker, I was responsible for designing and building company websites and leading the implementation and testing of a CRM, lead distribution tool, and other essential resources for agents. 🌟
                       </p>
                     </Text>
@@ -91,7 +91,7 @@ function About() {
                     <br></br>
                     <Text backgroundColor={'chakra-body-bg'} rounded={15}>
                       <p>
-                      🎓 Recently, I graduated with a Bachelor of Science in Computer Science, solidifying my credentials as a technology professional. I am now equipped and eager to contribute to innovative and impactful projects in the tech industry. 🌐✨
+                      🎓 I hold a Bachelor of Science in Computer Science, which has solidified my credentials as a technology professional. I am equipped and eager to contribute to innovative and impactful projects in the tech industry. 🌐✨
                       </p>
                     </Text>
                   </Text>

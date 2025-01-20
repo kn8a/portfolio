@@ -82,7 +82,7 @@ const Contact = () => {
       mx="auto"
       marginTop={10}
     >
-      <Stack spacing={10}>
+      <Stack spacing={2}>
         <Flex align="center" justify="center" direction="column">
           <Heading
             className="heading"
@@ -181,11 +181,11 @@ const Contact = () => {
                 required
                 color={'gray'}
               >
-                <option value="hire">Hire for full/part time</option>
-                <option value="freelance">Freelance work</option>
+                <option value="hire">General message</option>
+                <option value="freelance">Business Opportunity</option>
                 <option value="startup">Join a startup</option>
                 <option value="open-source">Open source project</option>
-                <option value="recruiter">I am a recruiter</option>
+                {/* <option value="recruiter">I am a recruiter</option> */}
               </Select>
             </FormControl>
             <FormControl id="message">

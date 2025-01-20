@@ -23,12 +23,12 @@ const InfoSection = () => {
     <Container
       maxW="7xl"
       p={{ base: 5, md: 10 }}
-      pt={{ base: 10, md: 20, lg: 0 }}
+      pt={{ base: 10, md: 20, lg: 20 }}
       pb={0}
       mb={0}
       id={'top'}
       display="flex"
-      justifyContent={'space-around'}
+      justifyContent={'center'}
       flexDirection={{
         base: 'column-reverse',
         sm: 'column-reverse',
@@ -36,7 +36,7 @@ const InfoSection = () => {
         lg: 'row-reverse',
       }}
     >
-      <VStack
+      {/* <VStack
         minW={{ base: '100%', lg: '600px' }}
         spacing={{ base: 2, lg: 6 }}
         px={2}
@@ -46,17 +46,17 @@ const InfoSection = () => {
         pl={{ base: '2px', md: 0 }}
         flex={1}
         maxW='700px'
-        // border={'2px '}
-        // borderColor='green'
-      >
+        border={'2px '}
+        borderColor='green'
+      > */}
         <Stack justifyContent="center" alignItems="center" mb={0} pb={0}>
-          <Text
+          {/* <Text
             fontSize="sm"
             marginTop={{ base: '5', sm: '5', md: '20', lg: '20' }}
-          ></Text>
+          ></Text> */}
         </Stack>
         <Heading
-          textAlign={{ base: 'left', sm: 'left' }}
+          textAlign={{ base: 'center', sm: 'center' }}
           fontSize={{ base: '1.6rem', md: '2.7rem' }}
           fontFamily={'font1'}
           lineHeight={1.4}
@@ -69,7 +69,6 @@ const InfoSection = () => {
             textList={[
               'a Chess player.',
               'a Programmer.',
-              'a Full-Stack Developer.',
               'a Tennis Player.',
               'a learner.',
               'a creator.',
@@ -78,15 +77,15 @@ const InfoSection = () => {
             delay={800}
           />
         </Heading>
-        <Text textAlign="left" maxWidth={'container.sm'} lineHeight={1.7}>
+        {/* <Text textAlign="left" maxWidth={'container.sm'} lineHeight={1.7}>
           Tech lover and coding enthusiast! Embracing the power of the web, AI
           and open source. <br />
           Explore my diverse projects and skills that define me as a dynamic
           developer, always up for thrilling new challenges!
-        </Text>
-        <Divider mt={2} mb={2} />
-        <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}>
-          <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
+        </Text> */}
+        {/* <Divider mt={2} mb={2} a/> */}
+        {/* <Flex alignItems="center" justify="left" w="100%" mb={0} pb={0}> */}
+          {/* <Box textAlign="center" mb={0} pb={0} display="flex" gap={4}>
             {accounts.map((sc, index) => (
               <Flex
                 key={index}
@@ -124,47 +123,10 @@ const InfoSection = () => {
                 </Text>
               </Flex>
             ))}
-          </Box>
-        </Flex>
-      </VStack>
-      <Flex
-        // width={'100%'}
-        maxW='400px'
-        flex={1}
-        alignItems={'center'}
-        justifyContent={{ base: 'center', lg: 'center' }}
-        pt={{ base: '10', sm: '10', md: '10', lg: '10' }}
-        mt={{ base: '5', sm: '5', md: '0', lg: '0' }}
-        // border={'2px '}
-        // borderColor='green'
-      >
-        {/* <Boop rotation={20} timing={200}> */}
-        <Image
-          borderRadius="full"
-          boxSize={{ base: '200px', md: '250px', lg: '300px' }}
-          src="/kn8image.jpg"
-          alt="Andrew Knight"
-          boxShadow="dark-lg"
-        ></Image>
-        {/* </Boop> */}
-        {/* <Box
-          shadow={'md'}
-          width={{ base: '90%', sm: '100%' }}
-          maxW={'400px'}
-          h={'230px'}
-          className="video-wrapper"
-          display={'flex'}
-          alignItems="center"
-        >
-          <ReactPlayer
-            fallback={<Spinner color="red.500" />}
-            controls={true}
-            width={'100%'}
-            height={'100%'}
-            url="https://youtu.be/zE8vtrzFuCI"
-          />
-        </Box> */}
-      </Flex>
+          </Box> */}
+        {/* </Flex> */}
+      {/* </VStack> */}
+      
     </Container>
   );
 };

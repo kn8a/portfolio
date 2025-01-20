@@ -17,7 +17,7 @@ function App() {
   return (
     <ChakraProvider theme={theme} >
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <Nav />
+      {/* <Nav /> */}
       
       <InfoSection />
       
@@ -26,10 +26,10 @@ function App() {
           <BGParticles/>
         </Flex>
       <About />
-      <Projects />
-      <Skills />
+      {/* <Projects />
+      <Skills /> */}
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </ChakraProvider>
   );
 }

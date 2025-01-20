@@ -3,6 +3,7 @@ import {
   Box,
   Container,
   Heading,
+  useBreakpointValue,
   Text,
 } from '@chakra-ui/react';
 // import Knightdark from '../assets/images/knight-gd1.svg';
@@ -13,106 +14,65 @@ import '@fontsource/la-belle-aurore';
 // import AsciiArt from './AsciiArt';
 // import AudioPlayer from './AudioPlayer';
 import ParticleImage from './ParticleImage';
+import { useEffect, useState } from 'react';
 
 function About() {
   // const knightimage = useColorModeValue(Knightlight, Knightdark);
+  const aspectRatio = 270 / 400;
+  const [size, setSize] = useState({
+    width: Math.min(Math.max(window.innerWidth * 0.4, 300), 500),
+    height: Math.min(Math.max(window.innerWidth * 0.4, 300), 500) / aspectRatio, // Adjust height dynamically
+  });
 
+  useEffect(() => {
+    const updateSize = () => {
+      const newWidth = Math.min(Math.max(window.innerWidth * 0.4, 300), 500);
+      const newHeight = newWidth / aspectRatio; // Calculate height based on aspect ratio
+
+      setSize({ width: newWidth, height: newHeight });
+    };
+
+    window.addEventListener("resize", updateSize);
+    updateSize(); // Initialize with correct size
+
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   return (
     <>
       <Container
         id={'about'}
         maxW="7xl"
-        p={{ base: 5, md: 10 }}
+        // p={{ base: 5, md: 10 }}
         mx="auto"
         marginTop={0}
         // border={'1px'}
+        justifyContent={'center'}
+        display={'flex'}
       >
         
         <Flex
-          paddingTop={10}
+          paddingTop={4}
           alignItems={'flex-start'}
           gap={'2rem'}
           // border={'2px'}
           direction={{ base: 'column-reverse', md: 'row' }}
           justifyContent={'flex-start'}
         >
-          <Box border={0}>
-            <Flex>
-              <Box
-                defaultindex={[2]}
-                maxWidth="container.lg"
-                m={4}
-                gap={4}
-                flexDirection={'column'}
-                display={'flex'}
-                // border={'1px'}
-              >
-                <Flex
-                  justifyItems={'center'}
-                  alignItems={'baseline'}
-                  justifyContent={'space-between'}
-                  direction={{ base: 'column', md: 'row' }}
-                  placeContent={'flex-start'}
-                >
-                  <Heading
-                    as={'h2'}
-                    minWidth={180}
-                    size={'xl'}
-                    textAlign={'left'}
-                    m={4}
-                    className="heading"
-                    marginBottom={0}
-                    fontFamily={'font1'}
-                    fontWeight={400}
-                    fontSize={'xx-large'}
-                  >
-                    About me
-                  </Heading>
-                  {/* <AudioPlayer /> */}
-                </Flex>
+          
 
-                <Box pl={2}>
-                  <Text lineHeight={1.7}>
-                    <Text backgroundColor={'chakra-body-bg'} rounded={15} >
-                      <p>
-                      💻 I have been a dedicated technology enthusiast from a young age, starting with fixing and maintaining classroom computers at age 10, and progressing to running my own computer repair business at age 18. 
-                      My career took an initial turn into sales, and later I transitioned into real estate where my technical skills became invaluable. In addition to operating as an agent and then a broker, I was responsible for designing and building company websites and leading the implementation and testing of a CRM, lead distribution tool, and other essential resources for agents. 🌟
-                      </p>
-                    </Text>
-                    <br></br>
-                    <Text backgroundColor={'chakra-body-bg'} rounded={15}>
-                      <p>
-                      🚀 In 2020, I decided to enhance my technical expertise by pursuing full-stack development. 
-                      I completed Harvard's CS50 program and then further advanced my skills through The Odin Project. 
-                      During this period, I developed a range of projects utilizing JavaScript, C, and Python, and worked a variety of tools and frameworks... 🛠️
-                      </p>
-                    </Text>
-
-                    <br></br>
-                    <Text backgroundColor={'chakra-body-bg'} rounded={15}>
-                      <p>
-                      🎓 I hold a Bachelor of Science in Computer Science, which has solidified my credentials as a technology professional. I am equipped and eager to contribute to innovative and impactful projects in the tech industry. 🌐✨
-                      </p>
-                    </Text>
-                  </Text>
-                </Box>
-              </Box>
-            </Flex>
-          </Box>
-
-          <Box className="knightImage" alignSelf={'center'} >
+          <Box className="knightImage"  alignSelf={'center'} >
           <ParticleImage
-        width = {270}
-        height = {400}
+        width = {size.width}
+        height = {size.height}
         src = {KnightGray}
         particleSize = {3}
         push = {0.01}
         threshold = {60}
         particleType = "square"
-        gap = {3}
-        noise = {0.2}
-        canvasWidth = {290}
-        canvasHeight = {430}
+        gap = {4}
+        noise = {0.3}
+        canvasWidth = {size.width*1.2}
+        canvasHeight = {size.height*1.2}
         returnSpeed = {0.075}
         
       />
